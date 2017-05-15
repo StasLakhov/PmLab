@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Rails PmLab: test" uuid="15de0f60-78bf-40ea-bbb7-a475c90d7d8f">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/pmlab_db</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails PmLab: development" uuid="81098095-0a8f-478a-8be9-001760834467">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/pmlab_db</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Rails PmLab: production" uuid="56a0a3a5-c151-43d5-be5a-7a1c4eb5abe6">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/config/database.yml</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/pmlab_db</jdbc-url>
+    </data-source>
+  </component>
+</project>
