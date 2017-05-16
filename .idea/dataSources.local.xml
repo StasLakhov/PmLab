@@ -3,19 +3,12 @@
   <component name="dataSourceStorageLocal">
     <data-source name="Rails PmLab: test" uuid="15de0f60-78bf-40ea-bbb7-a475c90d7d8f">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
-      <user-name>superstas</user-name>
-      <user-password>dfdadfc7df9bdf98df99df9edf9f</user-password>
     </data-source>
     <data-source name="Rails PmLab: development" uuid="81098095-0a8f-478a-8be9-001760834467">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
-      <secret-storage>master_key</secret-storage>
-      <first-sync>true</first-sync>
-      <user-name>superstas</user-name>
     </data-source>
     <data-source name="Rails PmLab: production" uuid="56a0a3a5-c151-43d5-be5a-7a1c4eb5abe6">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
-      <user-name>superstas</user-name>
-      <user-password>dfdadfc7df9bdf98df99df9edf9f</user-password>
     </data-source>
   </component>
 </project>

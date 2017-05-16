@@ -2659,3 +2659,729 @@ Processing by ProjectsController#new as HTML
 Completed 200 OK in 68ms (Views: 66.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 01:36:46 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 3796ms (Views: 3784.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-16 01:36:54 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (0.2ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (65.7ms)
+Completed 200 OK in 94ms (Views: 93.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2017-05-16 01:36:59 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 46ms (Views: 27.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 01:55:04 -0700
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 1115ms (Views: 1101.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 01:59:25 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 150ms (Views: 147.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-16 02:01:08 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (0.3ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (1953.9ms)
+Completed 200 OK in 2209ms (Views: 2185.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-16 02:38:11 -0700
+  [1m[35m (26.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/stas/.rvm/gems/ruby-2.4.0@pmlab/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.4.0@pmlab/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb (11.1ms)
+Completed 200 OK in 53ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 02:38:17 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (41.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (121.5ms)
+Completed 200 OK in 3384ms (Views: 3273.3ms | ActiveRecord: 85.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 02:39:21 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 67ms (Views: 63.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-16 02:40:43 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (0.6ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (87.9ms)
+Completed 200 OK in 163ms (Views: 135.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-16 02:40:44 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zRpercijR31RQY7z5P/8w6n/xCXSHp8yiTckGtMpZ0YX4bDOetVCZnls9kcUZYBGQEXHXqaeNHPE9B0jcMD/Vg==", "projects"=>{"name"=>"", "description"=>""}, "commit"=>"Save Projects"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 8ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 02:40:44 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 02:41:52 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 1601ms (Views: 1599.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 02:43:38 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 1651ms (Views: 1649.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/7" for 127.0.0.1 at 2017-05-16 02:45:42 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mProject Load (65.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 175ms (Views: 41.7ms | ActiveRecord: 66.2ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2017-05-16 03:05:25 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (94.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (39.1ms)
+Completed 200 OK in 1359ms (Views: 826.6ms | ActiveRecord: 94.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:07:45 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (17.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (121.3ms)
+Completed 200 OK in 693ms (Views: 673.8ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2017-05-16 03:07:49 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (21.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (6688.8ms)
+Completed 500 Internal Server Error in 6774ms (ActiveRecord: 21.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `project' for #<#<Class:0x000000035171f8>:0x007f8382592470>
+Did you mean?  @project):
+     9: </p>
+    10: 
+    11: <p>
+    12:   <%= link_to 'Back', projects_path(project) %>
+    13: </p>
+  
+app/views/projects/show.html.erb:12:in `_app_views_projects_show_html_erb__2967134791585148971_70101402163260'
+Started GET "/projects/3" for 127.0.0.1 at 2017-05-16 03:08:12 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 183ms (Views: 178.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:08:14 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 218ms (Views: 216.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects/6" for 127.0.0.1 at 2017-05-16 03:08:16 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 87ms (Views: 54.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:08:17 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 220ms (Views: 217.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects/8" for 127.0.0.1 at 2017-05-16 03:09:02 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 303ms (Views: 298.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:09:03 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 50ms (Views: 48.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:10:31 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (5.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 79ms (Views: 72.7ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:10:48 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 3760ms (Views: 3744.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:11:00 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 3272ms (Views: 3270.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:11:11 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 2437ms (Views: 2435.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2017-05-16 03:11:44 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 75ms (Views: 70.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:11:45 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 65ms (Views: 61.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:12:10 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 50ms (Views: 47.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:12:17 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 40ms (Views: 37.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:13:44 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 76ms (Views: 74.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-16 03:15:02 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (0.4ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 52ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:20:11 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 53ms (Views: 50.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:22:17 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 219ms (Views: 216.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:22:40 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 58ms (Views: 56.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:23:05 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial projects/_new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/stas/PmLab/app/views"
+):
+    3: 
+    4: 
+    5: <button type="button" class="glyphicon glyphicon-plus-sign" aria-label="Left Align">
+    6:   <%= render new_project_path %>
+    7: </button>
+    8: 
+    9: <table>
+  
+app/views/projects/index.html.erb:6:in `_app_views_projects_index_html_erb___3715005885232890979_70101401344260'
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:23:19 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 55ms (Views: 53.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-16 03:25:19 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (0.5ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 96ms (Views: 94.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:26:13 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 57ms (Views: 55.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:26:25 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:27:02 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/6" for 127.0.0.1 at 2017-05-16 03:27:04 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 50ms (Views: 47.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/3/edit" for 127.0.0.1 at 2017-05-16 03:27:07 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/edit.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 68ms (Views: 65.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-16 03:27:10 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (0.8ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 55ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-16 03:27:11 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zPIOJoJcyZ48YxsV8lyi2FZJS7GXBYtGAd/19NiPvHAWCeBFMCrMhRROY6ECxt5dv/NIyuOFIAdMHMzNe2YkYA==", "projects"=>{"name"=>"", "description"=>""}, "commit"=>"Save Projects"}
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 20ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:27:11 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-16 03:27:13 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (0.3ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:39:04 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 52ms (Views: 50.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-16 03:39:07 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (0.8ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 65ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:39:09 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 53ms (Views: 51.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:41:26 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 49ms (Views: 47.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:41:41 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 266ms (Views: 264.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-16 03:41:44 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (0.6ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 64ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:41:56 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 59ms (Views: 57.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-16 03:42:09 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (0.3ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:42:41 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-16 03:42:42 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (0.9ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 52ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:42:48 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 52ms (Views: 50.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:43:21 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 40ms (Views: 38.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-16 03:43:23 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:43:27 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 53ms (Views: 49.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:43:50 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 43ms (Views: 40.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:44:38 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-16 03:44:41 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:44:43 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 98ms (Views: 96.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:44:48 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:45:01 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-16 03:45:06 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 44ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-16 03:45:08 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+2tx583ZcE/22a2halvqetAEK/AjQMqMaLLRH4J279QhkJ+Ef691VN701RWawZb/Ob4oi1fAYc0lcegmIZ93xA==", "projects"=>{"name"=>"ertherth", "description"=>"ertherth"}, "commit"=>"Save Projects"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (148.4ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "ertherth"], ["description", "ertherth"], ["created_at", "2017-05-16 10:45:08.863331"], ["updated_at", "2017-05-16 10:45:08.863331"]]
+  [1m[35m (72.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 229ms (ActiveRecord: 222.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:45:09 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:45:38 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 54ms (Views: 52.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2017-05-16 03:45:40 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:45:55 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:46:22 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:46:52 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:47:17 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2017-05-16 03:47:37 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:48:08 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 55ms (Views: 51.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/projects/9" for 127.0.0.1 at 2017-05-16 03:48:09 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 140ms (Views: 135.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:48:10 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 63ms (Views: 60.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/8/edit" for 127.0.0.1 at 2017-05-16 03:48:12 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/edit.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2017-05-16 03:49:23 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 45ms (Views: 40.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-16 03:49:27 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 63ms (Views: 59.5ms | ActiveRecord: 1.3ms)
+
+
