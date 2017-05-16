@@ -22,7 +22,10 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    render 'edit'
+    @project = Project.find(params[:id])
+    if @project.update(project_params)
+      redirect_to projects_path
+    end
   end
 
   def destroy
@@ -34,7 +37,7 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:projects).permit(:name, :description)
+    params.require(:project).permit(:name, :description)
   end
 
 end
