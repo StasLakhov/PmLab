@@ -5260,3 +5260,2018 @@ Processing by ProjectsController#index as HTML
 Completed 200 OK in 44ms (Views: 43.1ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 02:24:37 -0700
+  [1m[35m (20.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (21.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (61.7ms)
+Completed 200 OK in 5294ms (Views: 5242.4ms | ActiveRecord: 34.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 02:25:22 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 60ms (Views: 50.2ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/projects/15/edit" for 127.0.0.1 at 2017-05-18 02:25:24 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (139.5ms)
+  Rendered projects/edit.html.erb within layouts/application (140.3ms)
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `birthday' for #<Project:0x007ff6536aded8>):
+    17:                                       ['In Testing', 'In Testing'] ]) %>
+    18:     </p>
+    19: 
+    20:     <%= f.date_field :birthday %>
+    21: 
+    22:     <p>
+    23:       <%= f.submit %>
+  
+app/views/projects/_form.html.erb:20:in `block in _app_views_projects__form_html_erb__1453912524419277354_70347960876560'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb__1453912524419277354_70347960876560'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb___2724772223486966951_70347873418560'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 02:25:31 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 39ms (Views: 37.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/14/edit" for 127.0.0.1 at 2017-05-18 02:25:47 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (13.2ms)
+  Rendered projects/edit.html.erb within layouts/application (14.3ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `birthday' for #<Project:0x007ff653874078>):
+    17:                                       ['In Testing', 'In Testing'] ]) %>
+    18:     </p>
+    19: 
+    20:     <%= f.date_field :birthday %>
+    21: 
+    22:     <p>
+    23:       <%= f.submit %>
+  
+app/views/projects/_form.html.erb:20:in `block in _app_views_projects__form_html_erb__1453912524419277354_70347963308800'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb__1453912524419277354_70347963308800'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb___2724772223486966951_70347969861620'
+  [1m[35m (26.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5945696501651356170);[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (26.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5945696501651356170)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/projects/14/edit" for 127.0.0.1 at 2017-05-18 02:54:18 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (63.5ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (66.5ms)
+Completed 200 OK in 788ms (Views: 710.8ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/projects/14/edit" for 127.0.0.1 at 2017-05-18 02:54:38 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (214.1ms)
+  Rendered projects/edit.html.erb within layouts/application (215.0ms)
+Completed 500 Internal Server Error in 237ms (ActiveRecord: 5.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `select_date' for #<ActionView::Helpers::FormBuilder:0x007f546172a5a8>
+Did you mean?  select):
+    19: 
+    20:     <p>
+    21:       <%= f.label :startdate %><br>
+    22:       <%= f.select_date :startdate %>
+    23:     </p>
+    24: 
+    25:     <p>
+  
+app/views/projects/_form.html.erb:22:in `block in _app_views_projects__form_html_erb___1478036862584138937_70000194702000'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___1478036862584138937_70000194702000'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb___1484957292930346496_70000194953840'
+Started GET "/projects/14/edit" for 127.0.0.1 at 2017-05-18 02:54:50 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (4.7ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/projects/14" for 127.0.0.1 at 2017-05-18 02:55:04 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VNvumPY8CHLXM+V1C9f3H1VFnPcmDH5jPIPot18ySsN0J1YHa1vkEAZHzMPXy6EpEfdJAbCAF1SkEiiFIsCXCQ==", "project"=>{"name"=>"Date", "description"=>"Select", "status"=>"Waiting...", "startdate(1i)"=>"2017", "startdate(2i)"=>"5", "startdate(3i)"=>"1"}, "commit"=>"Update Project", "id"=>"14"}
+  [1m[36mProject Load (3.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (61.7ms)[0m  [1m[33mUPDATE "projects" SET "name" = $1, "description" = $2, "startdate" = $3, "updated_at" = $4 WHERE "projects"."id" = $5[0m  [["name", "Date"], ["description", "Select"], ["startdate", "{1=>2017, 2=>5, 3=>1}"], ["updated_at", "2017-05-18 09:55:04.352459"], ["id", 14]]
+  [1m[35m (139.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 225ms (ActiveRecord: 205.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 02:55:04 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 55ms (Views: 47.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/14/edit" for 127.0.0.1 at 2017-05-18 02:55:07 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (7.7ms)
+  Rendered projects/edit.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `day' for "{1=>2017, 2=>5, 3=>1}":String):
+    19: 
+    20:     <p>
+    21:       <%= f.label :startdate %><br>
+    22:       <%= f.date_select :startdate %>
+    23:     </p>
+    24: 
+    25:     <p>
+  
+app/views/projects/_form.html.erb:22:in `block in _app_views_projects__form_html_erb___1478036862584138937_70000193922760'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___1478036862584138937_70000193922760'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb___1484957292930346496_70000191390180'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 02:55:53 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 41ms (Views: 39.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/14/edit" for 127.0.0.1 at 2017-05-18 02:55:55 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (4.4ms)
+  Rendered projects/edit.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `day' for "{1=>2017, 2=>5, 3=>1}":String):
+    19: 
+    20:     <p>
+    21:       <%= f.label :startdate %><br>
+    22:       <%= f.date_select :startdate %>
+    23:     </p>
+    24: 
+    25:     <p>
+  
+app/views/projects/_form.html.erb:22:in `block in _app_views_projects__form_html_erb___1478036862584138937_70000202136700'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___1478036862584138937_70000202136700'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb___1484957292930346496_70000202169320'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 02:55:57 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/13/edit" for 127.0.0.1 at 2017-05-18 02:56:41 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (3.8ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 51ms (Views: 47.6ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/projects/13" for 127.0.0.1 at 2017-05-18 02:56:43 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M1BoTAAkc8OF5NRp58Aw7zaK3iE8sU5MUh0Gq0oYRBkEXgm3q4VASDynLA2DSk3OG/NM+NS2Bo0iosY/IHo4LA==", "project"=>{"name"=>"io", "description"=>"5", "status"=>"Waiting...", "startdate(1i)"=>"2017", "startdate(2i)"=>"5", "startdate(3i)"=>"18"}, "commit"=>"Update Project", "id"=>"13"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "projects" SET "startdate" = $1, "updated_at" = $2 WHERE "projects"."id" = $3[0m  [["startdate", "{1=>2017, 2=>5, 3=>18}"], ["updated_at", "2017-05-18 09:56:43.973109"], ["id", 13]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 11ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 02:56:43 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/13/edit" for 127.0.0.1 at 2017-05-18 02:56:48 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (7.5ms)
+  Rendered projects/edit.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `day' for "{1=>2017, 2=>5, 3=>18}":String):
+    19: 
+    20:     <p>
+    21:       <%= f.label :startdate %><br>
+    22:       <%= f.date_select :startdate %>
+    23:     </p>
+    24: 
+    25:     <p>
+  
+app/views/projects/_form.html.erb:22:in `block in _app_views_projects__form_html_erb___1478036862584138937_70000196087140'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___1478036862584138937_70000196087140'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb___1484957292930346496_70000196202600'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 02:56:50 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/15/edit" for 127.0.0.1 at 2017-05-18 02:56:51 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (4.0ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/14/edit" for 127.0.0.1 at 2017-05-18 02:57:16 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (8.9ms)
+  Rendered projects/edit.html.erb within layouts/application (10.6ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `day' for "{1=>2017, 2=>5, 3=>1}":String):
+    19: 
+    20:     <p>
+    21:       <%= f.label :startdate %><br>
+    22:       <%= f.date_select :startdate %>
+    23:     </p>
+    24: 
+    25:     <p>
+  
+app/views/projects/_form.html.erb:22:in `block in _app_views_projects__form_html_erb___1478036862584138937_70000195779940'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___1478036862584138937_70000195779940'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb___1484957292930346496_70000195916460'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 02:59:37 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 69ms (Views: 67.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-18 03:23:07 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (5.9ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 93ms (Views: 79.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-18 03:23:13 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mlKN88sXhJ7KPVg9PhwHjH342Dri1D1hECX4P5wwfdWK2w95O5lJ4frznmxGSZRYqPuQbQqsPL3ZPnZSNxjf4Q==", "project"=>{"name"=>"", "description"=>"", "status"=>"Waiting...", "startdate(1i)"=>"2017", "startdate(2i)"=>"5", "startdate(3i)"=>"18"}, "commit"=>"Create Project"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 03:23:13 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 59ms (Views: 57.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/13/edit" for 127.0.0.1 at 2017-05-18 03:23:15 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (7.7ms)
+  Rendered projects/edit.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `day' for "{1=>2017, 2=>5, 3=>18}":String):
+    19: 
+    20:     <p>
+    21:       <%= f.label :startdate %><br>
+    22:       <%= f.date_select :startdate %>
+    23:     </p>
+    24: 
+    25:     <p>
+  
+app/views/projects/_form.html.erb:22:in `block in _app_views_projects__form_html_erb___1478036862584138937_70000286253940'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___1478036862584138937_70000286253940'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb___1484957292930346496_70000286310960'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 03:23:28 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 36ms (Views: 35.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 03:23:39 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/projects/13/edit" for 127.0.0.1 at 2017-05-18 03:23:41 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (55.0ms)
+  Rendered projects/edit.html.erb within layouts/application (55.9ms)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `min' for "{1=>2017, 2=>5, 3=>18}":String):
+    19: 
+    20:     <p>
+    21:       <%= f.label :startdate %><br>
+    22:       <%= f.datetime_select :startdate %>
+    23:     </p>
+    24: 
+    25:     <p>
+  
+app/views/projects/_form.html.erb:22:in `block in _app_views_projects__form_html_erb___1478036862584138937_70000283274200'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___1478036862584138937_70000283274200'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb___1484957292930346496_70000283293440'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 03:23:53 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 48ms (Views: 46.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 03:24:16 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 40ms (Views: 37.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 03:24:42 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 85ms (Views: 59.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/13/edit" for 127.0.0.1 at 2017-05-18 03:24:44 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (6.2ms)
+  Rendered projects/edit.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `day' for "{1=>2017, 2=>5, 3=>18}":String):
+    19: 
+    20:     <p>
+    21:       <%= f.label :startdate %><br>
+    22:       <%= f.date_select :startdate %>
+    23:     </p>
+    24: 
+    25:     <p>
+  
+app/views/projects/_form.html.erb:22:in `block in _app_views_projects__form_html_erb___1478036862584138937_70000284370140'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___1478036862584138937_70000284370140'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb___1484957292930346496_70000284445160'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 03:24:47 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-18 03:24:49 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (4.5ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-18 03:24:52 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SKTXTRkUDx9ZxQKEfd4xyQIVsTKAEmEPuiqDxaBSQmFYLVXH6ZrCYGkLxNUFi6Id1xb5ZWhqYNNzMQ2oC3rgVQ==", "project"=>{"name"=>"", "description"=>"", "status"=>"Waiting...", "startdate(1i)"=>"2017", "startdate(2i)"=>"5", "startdate(3i)"=>"2"}, "commit"=>"Create Project"}
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `year' for #<ProjectsController:0x007f54616f79f0>):
+  
+app/controllers/projects_controller.rb:40:in `project_params'
+app/controllers/projects_controller.rb:20:in `create'
+Started POST "/projects" for 127.0.0.1 at 2017-05-18 03:25:13 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SKTXTRkUDx9ZxQKEfd4xyQIVsTKAEmEPuiqDxaBSQmFYLVXH6ZrCYGkLxNUFi6Id1xb5ZWhqYNNzMQ2oC3rgVQ==", "project"=>{"name"=>"", "description"=>"", "status"=>"Waiting...", "startdate(1i)"=>"2017", "startdate(2i)"=>"5", "startdate(3i)"=>"2"}, "commit"=>"Create Project"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 1..2)):
+  
+app/controllers/projects_controller.rb:40:in `[]'
+app/controllers/projects_controller.rb:40:in `project_params'
+app/controllers/projects_controller.rb:20:in `create'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 03:26:07 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 89ms (Views: 76.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/projects/13/edit" for 127.0.0.1 at 2017-05-18 03:26:09 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (5.2ms)
+  Rendered projects/edit.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `day' for "{1=>2017, 2=>5, 3=>18}":String):
+    19: 
+    20:     <p>
+    21:       <%= f.label :startdate %><br>
+    22:       <%= f.date_select :startdate.to_s %>
+    23:     </p>
+    24: 
+    25:     <p>
+  
+app/views/projects/_form.html.erb:22:in `block in _app_views_projects__form_html_erb___1478036862584138937_70000286443360'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___1478036862584138937_70000286443360'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb___1484957292930346496_70000286517900'
+Started GET "/projects/13/edit" for 127.0.0.1 at 2017-05-18 03:26:20 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (4.5ms)
+  Rendered projects/edit.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `day' for "{1=>2017, 2=>5, 3=>18}":String):
+    19: 
+    20:     <p>
+    21:       <%= f.label :startdate %><br>
+    22:       <%= f.date_select :startdate %>
+    23:     </p>
+    24: 
+    25:     <p>
+  
+app/views/projects/_form.html.erb:22:in `block in _app_views_projects__form_html_erb___1478036862584138937_70000198027440'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___1478036862584138937_70000198027440'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb___1484957292930346496_70000198164880'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 04:03:14 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 81ms (Views: 76.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/13/edit" for 127.0.0.1 at 2017-05-18 04:03:15 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (5.1ms)
+  Rendered projects/edit.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `year' for "{1=>2017, 2=>5, 3=>18}":String):
+    19: 
+    20:     <p>
+    21:       <%= f.label :startdate %><br>
+    22:       <%= f.date_select :startdate, {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year - 18, end_year: Date.today.year - 100} %>
+    23: 
+    24:     </p>
+    25: 
+  
+app/views/projects/_form.html.erb:22:in `block in _app_views_projects__form_html_erb___1478036862584138937_70000201302220'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___1478036862584138937_70000201302220'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb___1484957292930346496_70000201318720'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 04:03:20 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/6/edit" for 127.0.0.1 at 2017-05-18 04:03:22 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (4.9ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 46ms (Views: 43.2ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/projects/6" for 127.0.0.1 at 2017-05-18 04:03:30 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C1grryt9n5Ngq9W1J6WL8diN4YJceYJBVkB2gKUA8BmnrECih+REolgpBX/Foiwfvv1qYEJoq4aRr5iH8lhrZw==", "project"=>{"name"=>"ttt", "description"=>"ttt", "status"=>"Waiting...", "startdate(2i)"=>"2", "startdate(3i)"=>"3", "startdate(1i)"=>"1994"}, "commit"=>"Update Project", "id"=>"6"}
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (11.3ms)[0m  [1m[33mUPDATE "projects" SET "status" = $1, "startdate" = $2, "updated_at" = $3 WHERE "projects"."id" = $4[0m  [["status", "Waiting..."], ["startdate", "{2=>2, 3=>3, 1=>1994}"], ["updated_at", "2017-05-18 11:03:30.614917"], ["id", 6]]
+  [1m[35m (13.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 38ms (ActiveRecord: 26.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 04:03:30 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (8.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 59ms (Views: 49.6ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/projects/6" for 127.0.0.1 at 2017-05-18 04:03:33 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 64ms (Views: 41.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 04:03:35 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/6/edit" for 127.0.0.1 at 2017-05-18 04:03:37 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (6.9ms)
+  Rendered projects/edit.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `year' for "{2=>2, 3=>3, 1=>1994}":String):
+    19: 
+    20:     <p>
+    21:       <%= f.label :startdate %><br>
+    22:       <%= f.date_select :startdate, {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year - 18, end_year: Date.today.year - 100} %>
+    23: 
+    24:     </p>
+    25: 
+  
+app/views/projects/_form.html.erb:22:in `block in _app_views_projects__form_html_erb___1478036862584138937_70000185698680'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___1478036862584138937_70000185698680'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb___1484957292930346496_70000185984860'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 04:06:17 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/3/edit" for 127.0.0.1 at 2017-05-18 04:06:20 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (5.3ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 52ms (Views: 45.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 04:09:16 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 89ms (Views: 86.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/3/edit" for 127.0.0.1 at 2017-05-18 04:09:17 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (5.3ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 52ms (Views: 49.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/3/edit" for 127.0.0.1 at 2017-05-18 04:10:48 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.7ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/3/edit" for 127.0.0.1 at 2017-05-18 04:10:50 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (8.4ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 50ms (Views: 45.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/3/edit" for 127.0.0.1 at 2017-05-18 04:11:21 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (3.7ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 44ms (Views: 39.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 04:11:39 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 59ms (Views: 57.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/6/edit" for 127.0.0.1 at 2017-05-18 04:11:40 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (20.6ms)
+  Rendered projects/edit.html.erb within layouts/application (22.3ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `day' for "{2=>2, 3=>3, 1=>1994}":String):
+    19: 
+    20:     <p>
+    21:       <%= f.label :startdate %><br>
+    22:       <%= f.date_select :startdate, :html=>{:class => "datepicker"} %>
+    23: 
+    24:     </p>
+    25: 
+  
+app/views/projects/_form.html.erb:22:in `block in _app_views_projects__form_html_erb___1478036862584138937_70000194879960'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___1478036862584138937_70000194879960'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb___1484957292930346496_70000195122840'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 04:11:48 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 04:11:58 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/19/edit" for 127.0.0.1 at 2017-05-18 04:11:59 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (5.6ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 55ms (Views: 51.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 05:16:13 -0700
+  [1m[35m (11.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (8.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (161.1ms)
+Completed 500 Internal Server Error in 1163ms (ActiveRecord: 45.8ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...trap-sprockets"": expected "{", was ";"):
+    4:     <title>PmLab</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:3
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___3959157148357882831_34389580'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 05:30:45 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (15.5ms)
+Completed 500 Internal Server Error in 334ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...trap-sprockets'": expected "{", was ";"):
+    4:     <title>PmLab</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:3
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___4498405016144472849_24953860'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 05:31:45 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (41.9ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 7.1ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...trap-sprockets'": expected "{", was ";"):
+    4:     <title>PmLab</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:3
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___4498405016144472849_69865175070780'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 05:49:44 -0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (14.6ms)
+Completed 500 Internal Server Error in 179ms (ActiveRecord: 3.5ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...trap-sprockets'": expected "{", was ";"):
+    4:     <title>PmLab</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:3
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__1951428172969829892_33741420'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 05:52:02 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (14.9ms)
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 4.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...trap-sprockets'": expected "{", was ";"):
+    4:     <title>PmLab</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:3
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__966079733651510138_34389640'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 05:55:36 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (13.2ms)
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...trap-sprockets'": expected "{", was ";"):
+    4:     <title>PmLab</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:3
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__138158791952283080_37752520'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 05:59:08 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (19.6ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 4.7ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...ort 'bootstrap'": expected "{", was ";"):
+    4:     <title>PmLab</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:4
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__138158791952283080_70341212034700'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:00:02 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...rt '~bootstrap'": expected "{", was ";"):
+    4:     <title>PmLab</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:4
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__138158791952283080_70341206278360'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:00:11 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...rt '/bootstrap'": expected "{", was ";"):
+    4:     <title>PmLab</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:4
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__138158791952283080_70341214861140'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:01:40 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "*": expected selector, was "= require boots..."):
+    4:     <title>PmLab</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:1
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__138158791952283080_70341212032180'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:01:52 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 3766ms (Views: 3763.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:03:56 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "*": expected selector, was "= require boots..."):
+    4:     <title>PmLab</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:1
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__138158791952283080_70341213462300'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:04:06 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...trap-sprockets"": expected selector or at-rule, was "@import "bootst..."):
+    4:     <title>PmLab</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:4
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__138158791952283080_70341198526360'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:04:20 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 4366ms (Views: 4364.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:05:47 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 139ms (Views: 138.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:05:49 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 96ms (Views: 93.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:06:04 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 3009ms (Views: 3007.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2017-05-18 06:06:07 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/bootstrap/glyphicons-halflings-regular.woff2"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2017-05-18 06:06:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/bootstrap/glyphicons-halflings-regular.woff"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2017-05-18 06:06:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/bootstrap/glyphicons-halflings-regular.ttf"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:06:16 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 176ms (Views: 171.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2017-05-18 06:06:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/bootstrap/glyphicons-halflings-regular.woff2"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2017-05-18 06:06:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/bootstrap/glyphicons-halflings-regular.woff"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2017-05-18 06:06:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/bootstrap/glyphicons-halflings-regular.ttf"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-18 06:06:17 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (79.9ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (100.6ms)
+Completed 200 OK in 183ms (Views: 177.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:06:20 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 112ms (Views: 109.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:06:39 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 117ms (Views: 116.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:06:47 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 5078ms (Views: 5075.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2017-05-18 06:06:53 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/bootstrap/glyphicons-halflings-regular.woff2"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2017-05-18 06:06:53 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/bootstrap/glyphicons-halflings-regular.woff"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2017-05-18 06:06:53 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/fonts/bootstrap/glyphicons-halflings-regular.ttf"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:07:45 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 4882ms (Views: 4879.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:08:08 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 115ms (Views: 112.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:08:10 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 183ms (Views: 181.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/15" for 127.0.0.1 at 2017-05-18 06:08:11 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProject Load (18.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 300ms (Views: 103.0ms | ActiveRecord: 34.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:08:13 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 111ms (Views: 108.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:09:26 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 227ms (Views: 225.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:09:27 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 94ms (Views: 92.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/15" for 127.0.0.1 at 2017-05-18 06:09:29 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 94ms (Views: 90.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:09:30 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 123ms (Views: 118.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:09:47 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 170ms (Views: 167.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:09:48 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 128ms (Views: 126.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:09:54 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 207ms (Views: 205.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:09:55 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 101ms (Views: 99.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:09:56 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 108ms (Views: 106.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-18 06:09:58 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.8ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 98ms (Views: 97.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-18 06:10:11 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A5oDMKvKQLP6A67gnRkb3i54Xjy8b2XmPZoDvZQvOoITE4G6W0SNzMrNaLHlTIgK+3sWa1QXZDr0gY3QPweYtg==", "project"=>{"name"=>"o", "description"=>"o", "status"=>"Waiting..."}, "commit"=>"Create Project"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (124.1ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "created_at", "updated_at", "status") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "o"], ["description", "o"], ["created_at", "2017-05-18 13:10:11.159094"], ["updated_at", "2017-05-18 13:10:11.159094"], ["status", "Waiting..."]]
+  [1m[35m (19.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 154ms (ActiveRecord: 144.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:10:11 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 113ms (Views: 110.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/21/edit" for 127.0.0.1 at 2017-05-18 06:10:12 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.1ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 146ms (Views: 98.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:10:14 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 113ms (Views: 110.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:11:55 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...trap-sprockets"": expected "{", was ";"):
+    4:     <title>PmLab</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:3
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__138158791952283080_70341250561300'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:12:16 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.2ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...trap-datepicker": expected "{", was ";"):
+    4:     <title>PmLab</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:1
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__138158791952283080_70341232647260'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:13:20 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...trap-sprockets"": expected "{", was ";"):
+    4:     <title>PmLab</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:3
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__138158791952283080_70341266376700'
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:13:26 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 1714ms (Views: 1711.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/21/edit" for 127.0.0.1 at 2017-05-18 06:13:30 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.7ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 99ms (Views: 96.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/21/edit" for 127.0.0.1 at 2017-05-18 06:14:50 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (1.6ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 87ms (Views: 85.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-18 06:14:59 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (104.3ms)
+Completed 200 OK in 239ms (Views: 234.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:15:01 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.2ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 88ms (Views: 85.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:15:43 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.5ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 112ms (Views: 109.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:16:22 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.5ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 122ms (Views: 119.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:16:54 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.8ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 111ms (Views: 107.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:17:56 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (5.1ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 134ms (Views: 130.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:18:15 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.2ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 91ms (Views: 89.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:18:28 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.9ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 137ms (Views: 132.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:18:29 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (3.2ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 102ms (Views: 99.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:18:57 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (4.5ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 103ms (Views: 97.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:19:07 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (4.1ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 155ms (Views: 153.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:19:26 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (1.7ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...trap-sprockets"": expected "{", was ";"):
+    4:     <title>PmLab</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:3
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__138158791952283080_70341219812700'
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:22:32 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (1.7ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...trap-sprockets"": expected "{", was ";"):
+    4:     <title>PmLab</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:3
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__138158791952283080_70341236860560'
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:22:51 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (3.7ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...trap-sprockets"": expected "{", was ";"):
+    4:     <title>PmLab</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:3
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__138158791952283080_70341219977820'
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:22:57 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.2ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 2364ms (Views: 2361.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:23:29 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (3.4ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 132ms (Views: 129.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:24:42 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (3.8ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 135ms (Views: 128.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:25:14 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (3.4ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 119ms (Views: 113.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:26:12 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.3ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 104ms (Views: 98.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:26:20 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.5ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...trap-sprockets"": expected "{", was ";"):
+    4:     <title>PmLab</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:3
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__138158791952283080_70341250720020'
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:27:05 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.0ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 221ms (Views: 218.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:27:13 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (3.0ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "...trap-sprockets"": expected "{", was ";"):
+    4:     <title>PmLab</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:3
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__138158791952283080_70341242011700'
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:28:28 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (3.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.5ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 3567ms (Views: 3557.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:28:59 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (8.4ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 154ms (Views: 148.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:29:21 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.8ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 1470ms (Views: 1466.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:29:31 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (1.7ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 93ms (Views: 90.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:37:00 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (3.2ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 106ms (Views: 101.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:37:28 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.2ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 105ms (Views: 102.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:37:54 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.4ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 97ms (Views: 95.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:37:55 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (4.7ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 116ms (Views: 111.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:38:28 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (1.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (4.4ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 140ms (Views: 118.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:38:48 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (4.0ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 106ms (Views: 103.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:39:54 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.4ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 102ms (Views: 99.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/20/edit" for 127.0.0.1 at 2017-05-18 06:40:22 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (4.5ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 140ms (Views: 130.7ms | ActiveRecord: 0.7ms)
+
+

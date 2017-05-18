@@ -17,6 +17,18 @@
                                       ['In Testing', 'In Testing'] ]) %>
     </p>
 
+    <input type="text" class='datepicker' >
+
+    <div class="datepicker">
+      <input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.datepicker').datepicker();
+        });
+    </script>
+
     <p>
       <%= f.submit %>
     </p>
