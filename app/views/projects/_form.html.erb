@@ -17,19 +17,18 @@
                                       ['In Testing', 'In Testing'] ]) %>
     </p>
 
-    <input type="text" class='datepicker' >
+    <p>
 
-    <div class="datepicker">
-      <input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-th"></i></span>
-    </div>
-
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('.datepicker').datepicker();
-        });
-    </script>
+      <%= f.text_field :startdate, data:{ provide:'datepicker' } %>
+    </p>
 
     <p>
+      <%= f.label :enddate %><br>
+      <%= f.text_field :enddate, data:{ provide:'datepicker' } %>
+    </p>
+
+
+     <p>
       <%= f.submit %>
     </p>
 

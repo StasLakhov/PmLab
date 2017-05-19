@@ -5,6 +5,8 @@
     <th>Project</th>
     <th>Description</th>
     <th>Status</th>
+    <th>Start Date</th>
+    <th>End Date</th>
     <th colspan="3"></th>
   </tr>
 
@@ -13,6 +15,8 @@
         <td><%= project.name %></td>
         <td><%= project.description %></td>
         <td><%= project.status %></td>
+        <td><%= project.startdate %></td>
+        <td><%= project.enddate %></td>
         <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
         <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
         <td><%= link_to 'Delete', project,
