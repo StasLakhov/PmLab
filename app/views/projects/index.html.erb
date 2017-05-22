@@ -20,7 +20,7 @@
         <td><%= project.startdate %></td>
         <td><%= project.enddate %></td>
         <td><%= project.receive %></td>
-        <td><%= project.customer %></td>
+        <td><%= project.customer.name %></td>
         <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
         <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
         <td><%= link_to 'Delete', project,
