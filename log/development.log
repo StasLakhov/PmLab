@@ -7859,3 +7859,694 @@ Processing by ProjectsController#index as HTML
 Completed 200 OK in 112ms (Views: 110.2ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/projects" for 127.0.0.1 at 2017-05-19 07:39:25 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 344ms (Views: 329.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/projects/8/edit" for 127.0.0.1 at 2017-05-19 07:39:56 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (12.2ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 141ms (Views: 118.7ms | ActiveRecord: 5.1ms)
+
+
+Started PATCH "/projects/8" for 127.0.0.1 at 2017-05-19 07:40:01 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0MWgE1VGFMR7wvWYIyGvONHR2uoZPlg4c2HeJHqp4SnsnTvtawtLNvU2f3EnWRgCd2j0nqQl1pjs6zkT1CbiiA==", "project"=>{"name"=>"adfqe", "description"=>"dagfadgf", "status"=>"Waiting...", "startdate"=>"05/30/2017", "enddate"=>"05/24/2017"}, "commit"=>"Update Project", "id"=>"8"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (18.6ms)[0m  [1m[33mUPDATE "projects" SET "startdate" = $1, "enddate" = $2, "updated_at" = $3 WHERE "projects"."id" = $4[0m  [["startdate", "05/30/2017"], ["enddate", "05/24/2017"], ["updated_at", "2017-05-19 14:40:01.162505"], ["id", 8]]
+  [1m[35m (12.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 38ms (ActiveRecord: 32.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-19 07:40:01 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 108ms (Views: 104.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/3/edit" for 127.0.0.1 at 2017-05-19 07:40:11 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (5.3ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 98ms (Views: 95.1ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/projects/3" for 127.0.0.1 at 2017-05-19 07:40:15 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c/R9LpOjdrDKUbMibdveD+jbgj0vWOwKda54lvmGiT6WbrnTtMkwTUDmRDX7Em8WuJWeNdIVnQ1FdlkyTGVOeA==", "project"=>{"name"=>"1111", "description"=>"1111", "status"=>"Waiting...", "startdate"=>"05/30/2017", "enddate"=>"05/31/2017"}, "commit"=>"Update Project", "id"=>"3"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "projects" SET "startdate" = $1, "enddate" = $2, "updated_at" = $3 WHERE "projects"."id" = $4[0m  [["startdate", "05/30/2017"], ["enddate", "05/31/2017"], ["updated_at", "2017-05-19 14:40:15.346098"], ["id", 3]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-19 07:40:15 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 103ms (Views: 101.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/18/edit" for 127.0.0.1 at 2017-05-19 07:40:17 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (3.7ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 98ms (Views: 94.2ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/projects/18" for 127.0.0.1 at 2017-05-19 07:40:22 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gtsdr6vPk3nU0TXReAnnDQr+C9rB6h/kabU1487pVcC++VkJeqfNqS1dFNFJlcZnj/+weAFW/jgEfaVXqtBtAQ==", "project"=>{"name"=>"Date", "description"=>"test", "status"=>"Waiting...", "startdate"=>"06/10/2017", "enddate"=>"06/10/2017"}, "commit"=>"Update Project", "id"=>"18"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "projects" SET "startdate" = $1, "enddate" = $2, "updated_at" = $3 WHERE "projects"."id" = $4[0m  [["startdate", "06/10/2017"], ["enddate", "06/10/2017"], ["updated_at", "2017-05-19 14:40:22.360966"], ["id", 18]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-19 07:40:22 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 97ms (Views: 95.3ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5945696501651356170);[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5945696501651356170)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/projects" for 127.0.0.1 at 2017-05-19 07:42:36 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 445ms (Views: 430.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/projects/19/edit" for 127.0.0.1 at 2017-05-19 07:42:39 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (11.1ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 121ms (Views: 101.4ms | ActiveRecord: 4.8ms)
+
+
+Started PATCH "/projects/19" for 127.0.0.1 at 2017-05-19 07:42:43 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Aleu6BC57QLAW/gsAFt6SuTr6g5MLlWnYUYahCSTlpO05DiH6uKFZh5oOmCAn7wQMM85bEWy3O96+NIXWpnqog==", "project"=>{"name"=>"0", "description"=>"0", "status"=>"Active", "startdate"=>"05/30/2017", "enddate"=>"05/23/2017", "receivedate"=>"05/30/2017"}, "commit"=>"Update Project", "id"=>"19"}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+Unpermitted parameter: :receivedate
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 8ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-19 07:42:43 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 99ms (Views: 98.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/22/edit" for 127.0.0.1 at 2017-05-19 07:43:00 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (3.1ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 92ms (Views: 88.7ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/projects/22" for 127.0.0.1 at 2017-05-19 07:43:13 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HUO7CRJvvAe+ELTwuwTe5norjdhQnA/tObd+yj7ZWlnxYkfHr38VqoFhiwSF7qnBLPfb2LmgOYsS+CEFz9c9Wg==", "project"=>{"name"=>"q", "description"=>"q", "status"=>"Done", "startdate"=>"", "enddate"=>"", "receivedate"=>"05/30/2017"}, "commit"=>"Update Project", "id"=>"22"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+Unpermitted parameter: :receivedate
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "projects" SET "startdate" = $1, "enddate" = $2, "updated_at" = $3 WHERE "projects"."id" = $4[0m  [["startdate", ""], ["enddate", ""], ["updated_at", "2017-05-19 14:43:13.552725"], ["id", 22]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 10ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-19 07:43:13 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 82ms (Views: 81.1ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/projects/18/edit" for 127.0.0.1 at 2017-05-19 07:44:58 -0700
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (16.8ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 422ms (Views: 393.3ms | ActiveRecord: 4.6ms)
+
+
+Started PATCH "/projects/18" for 127.0.0.1 at 2017-05-19 07:45:01 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Nkf06ORuTEA8A8cj1JYNlRC/5gQwJsYE6bEsJgWei6x/yMh9PIvMQWrGrTpPJhWqCYRRH8SX9HWN8dvahxm9ag==", "project"=>{"name"=>"Date", "description"=>"test", "status"=>"Waiting...", "startdate"=>"06/10/2017", "enddate"=>"06/10/2017", "receivedate"=>""}, "commit"=>"Update Project", "id"=>"18"}
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+Unpermitted parameter: :receivedate
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 33ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-19 07:45:01 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 118ms (Views: 116.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/21" for 127.0.0.1 at 2017-05-19 07:45:03 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 98ms (Views: 95.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-19 07:45:05 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 117ms (Views: 112.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/projects/21/edit" for 127.0.0.1 at 2017-05-19 07:45:06 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (7.7ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 126ms (Views: 120.5ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/projects/21" for 127.0.0.1 at 2017-05-19 07:45:09 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OL1jMmLPlKgsFPacwfH03/FAHH5cRY3sNkiEmc5Rr3ogC36jZlJgTqZ5Li92WlmiUN9x1r+wFeyF4ZngFd6tAw==", "project"=>{"name"=>"o", "description"=>"o", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receivedate"=>"05/23/2017"}, "commit"=>"Update Project", "id"=>"21"}
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+Unpermitted parameter: :receivedate
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "projects" SET "startdate" = $1, "enddate" = $2, "updated_at" = $3 WHERE "projects"."id" = $4[0m  [["startdate", ""], ["enddate", ""], ["updated_at", "2017-05-19 14:45:09.239010"], ["id", 21]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 12ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-19 07:45:09 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 97ms (Views: 94.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-19 07:47:20 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 417ms (Views: 404.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-19 07:47:22 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (22.1ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 112ms (Views: 110.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-19 07:47:24 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zyo0CnKVgks86XuA5ZVUr+b/xy3x16b0hZOe1PMIDk3EcbODmX8/9YfyDzb5xFhVVl1+Bm2UYfmtjuKj9hr72Q==", "project"=>{"name"=>"", "description"=>"", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receivedate"=>""}, "commit"=>"Create Project"}
+Unpermitted parameter: :receivedate
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 29ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-19 07:47:24 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 103ms (Views: 101.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/18/edit" for 127.0.0.1 at 2017-05-19 07:47:29 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (4.6ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 100ms (Views: 90.8ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/projects/18" for 127.0.0.1 at 2017-05-19 07:47:39 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HYx/CxpvaW3IwkYnsFQ7SYYUXgg7MBmT3hWsaV8NrSMhrjutywc3vTFOZyeByBojAxXlqvuM+E+z3TzdOzSV4g==", "project"=>{"name"=>"Date", "description"=>"test", "status"=>"Waiting...", "startdate"=>"06/10/2017", "enddate"=>"06/10/2017", "receivedate"=>"05/27/2017"}, "commit"=>"Update Project", "id"=>"18"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+Unpermitted parameter: :receivedate
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-19 07:47:39 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 101ms (Views: 99.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/21/edit" for 127.0.0.1 at 2017-05-19 07:48:28 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (9.3ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 113ms (Views: 107.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/18/edit" for 127.0.0.1 at 2017-05-19 07:48:33 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (4.4ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 102ms (Views: 93.3ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/projects/18" for 127.0.0.1 at 2017-05-19 07:48:46 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XZ8DzPMFsoDZFO/8+z0BZ4L2qcQ9EtS0OOekciWwvHFhvUdqIm3sUCCYzvzKoSANB/cSZv2uNWhVLzTGQYmEsA==", "project"=>{"name"=>"Date", "description"=>"test", "status"=>"Waiting...", "startdate"=>"06/10/2017", "enddate"=>"06/10/2017", "receivedate"=>"05/23/2017"}, "commit"=>"Update Project", "id"=>"18"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+Unpermitted parameter: :receivedate
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-19 07:48:46 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 162ms (Views: 160.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/21/edit" for 127.0.0.1 at 2017-05-19 07:49:08 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (3.8ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 90ms (Views: 86.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-19 07:49:13 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 108ms (Views: 105.9ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5945696501651356170);[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemovereceivedateFromProjects (20170519145031)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (85.3ms)[0m  [1m[35mALTER TABLE "projects" DROP "receivedate"[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170519145031"]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5945696501651356170)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/projects" for 127.0.0.1 at 2017-05-21 23:49:24 -0700
+  [1m[35m (21.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (21.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (66.1ms)
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 35.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `receivedate' for #<Project:0x00000003ad2c78>):
+    18:         <td><%= project.status %></td>
+    19:         <td><%= project.startdate %></td>
+    20:         <td><%= project.enddate %></td>
+    21:         <td><%= project.receivedate %></td>
+    22:         <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
+    23:         <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
+    24:         <td><%= link_to 'Delete', project,
+  
+app/views/projects/index.html.erb:21:in `block in _app_views_projects_index_html_erb___3414785064977567518_31647380'
+app/views/projects/index.html.erb:14:in `_app_views_projects_index_html_erb___3414785064977567518_31647380'
+Started GET "/projects" for 127.0.0.1 at 2017-05-21 23:54:04 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (95.1ms)
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 9.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `receivedate' for #<Project:0x00000001a01c10>):
+    18:         <td><%= project.status %></td>
+    19:         <td><%= project.startdate %></td>
+    20:         <td><%= project.enddate %></td>
+    21:         <!--   <td><%= project.receivedate %></td> -->
+    22:         <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
+    23:         <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
+    24:         <td><%= link_to 'Delete', project,
+  
+app/views/projects/index.html.erb:21:in `block in _app_views_projects_index_html_erb___3414785064977567518_16890960'
+app/views/projects/index.html.erb:14:in `_app_views_projects_index_html_erb___3414785064977567518_16890960'
+Started GET "/projects" for 127.0.0.1 at 2017-05-21 23:54:05 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (9.9ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `receivedate' for #<Project:0x00000002d02918>):
+    18:         <td><%= project.status %></td>
+    19:         <td><%= project.startdate %></td>
+    20:         <td><%= project.enddate %></td>
+    21:         <!--   <td><%= project.receivedate %></td> -->
+    22:         <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
+    23:         <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
+    24:         <td><%= link_to 'Delete', project,
+  
+app/views/projects/index.html.erb:21:in `block in _app_views_projects_index_html_erb___3414785064977567518_23927580'
+app/views/projects/index.html.erb:14:in `_app_views_projects_index_html_erb___3414785064977567518_23927580'
+Started GET "/projects" for 127.0.0.1 at 2017-05-21 23:54:31 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 3091ms (Views: 3090.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/21/edit" for 127.0.0.1 at 2017-05-21 23:54:39 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (82.9ms)
+  Rendered projects/edit.html.erb within layouts/application (84.3ms)
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `receivedate' for #<Project:0x007f57d405d9e8>):
+    27:     </p>
+    28: 
+    29:     <!--    <p>
+    30:      <%= f.text_field :receivedate, data:{ provide:'datepicker' } %>
+    31:     </p>  -->
+    32: 
+    33: 
+  
+app/views/projects/_form.html.erb:30:in `block in _app_views_projects__form_html_erb___1021171417705161213_70007600144900'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___1021171417705161213_70007600144900'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb__637994597145295451_70007598015440'
+Started GET "/projects" for 127.0.0.1 at 2017-05-21 23:54:43 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 152ms (Views: 151.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-21 23:54:56 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 114ms (Views: 112.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/22/edit" for 127.0.0.1 at 2017-05-21 23:54:58 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.0ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 95ms (Views: 92.7ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/projects/22" for 127.0.0.1 at 2017-05-21 23:55:02 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"51VcHhH/jVXt86R+9tFFgBYa6QrRP8R30vJnUVfIFVDdOstKcn7vYmrEa/e8QsNXQqnfV3bGhSV58I33pI7aHA==", "project"=>{"name"=>"q", "description"=>"q", "status"=>"Done", "startdate"=>"05/30/2017", "enddate"=>"06/03/2017"}, "commit"=>"Update Project", "id"=>"22"}
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (21.3ms)[0m  [1m[33mUPDATE "projects" SET "startdate" = $1, "enddate" = $2, "updated_at" = $3 WHERE "projects"."id" = $4[0m  [["startdate", "05/30/2017"], ["enddate", "06/03/2017"], ["updated_at", "2017-05-22 06:55:02.903812"], ["id", 22]]
+  [1m[35m (65.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 93ms (ActiveRecord: 88.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-21 23:55:02 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 123ms (Views: 119.8ms | ActiveRecord: 2.0ms)
+
+
+  [1m[35m (10.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5945696501651356170);[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (19.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5945696501651356170)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5945696501651356170);[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddReceiveColumnToProject (20170522070750)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (54.5ms)[0m  [1m[35mALTER TABLE "projects" ADD "receive" character varying[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170522070750"]]
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5945696501651356170)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 00:09:05 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 2993ms (Views: 2973.6ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 00:10:09 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 184ms (Views: 179.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/projects/19/edit" for 127.0.0.1 at 2017-05-22 00:10:12 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (91.8ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (92.5ms)
+Completed 200 OK in 246ms (Views: 189.3ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/projects/19" for 127.0.0.1 at 2017-05-22 00:10:15 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PzgpcXjVWI/xnsDOqnzuPjZyFxaFNID+g88A3TwtoTTfuNn+d111q59krJuP3bURRYrYNTILFHYYkCCsoEflPg==", "project"=>{"name"=>"0", "description"=>"0", "status"=>"Active", "startdate"=>"05/30/2017", "enddate"=>"05/23/2017", "receive"=>"05/31/2017"}, "commit"=>"Update Project", "id"=>"19"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+Unpermitted parameter: :receive
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 00:10:15 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 129ms (Views: 127.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 00:11:04 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 441ms (Views: 429.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/projects/21/edit" for 127.0.0.1 at 2017-05-22 00:11:09 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (10.5ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 107ms (Views: 103.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/projects/21" for 127.0.0.1 at 2017-05-22 00:11:15 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"byq/2RDVftFejQzDxW84ZbX5UV73g00NUMwyN/RqsLZO1Dsg3GmiW3y26FgsZGjFUqrPuDmekPDkLU34wPsZqA==", "project"=>{"name"=>"o", "description"=>"o", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receive"=>"05/31/2017"}, "commit"=>"Update Project", "id"=>"21"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+Unpermitted parameter: :receive
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 00:11:15 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 118ms (Views: 116.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 00:13:53 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 122ms (Views: 115.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/projects/21/edit" for 127.0.0.1 at 2017-05-22 00:13:56 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (3.2ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 124ms (Views: 120.7ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/projects/21" for 127.0.0.1 at 2017-05-22 00:13:58 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tGuv8lY8B2rnS1mAo9N7NH4/qgnB5Bpz5XlM5QuB2JiVlSsLmoDb4MVwvRtK2CuUmWw07w/5x45RmDMqPxBxhg==", "project"=>{"name"=>"o", "description"=>"o", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receive"=>"05/16/2017"}, "commit"=>"Update Project", "id"=>"21"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "projects" SET "receive" = $1, "updated_at" = $2 WHERE "projects"."id" = $3[0m  [["receive", "05/16/2017"], ["updated_at", "2017-05-22 07:13:58.318311"], ["id", 21]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 00:13:58 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 122ms (Views: 119.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/22/edit" for 127.0.0.1 at 2017-05-22 00:14:10 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.8ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 112ms (Views: 109.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/projects/22" for 127.0.0.1 at 2017-05-22 00:14:13 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BWMEATKWER7LetNJCayXc6jQkO1Tx8XlSIchzx3vL6c/DJNVURdzKUxNHMBDPxGk/GOmsPQ+hLfjhctp7qng6w==", "project"=>{"name"=>"q", "description"=>"q", "status"=>"Done", "startdate"=>"05/30/2017", "enddate"=>"06/03/2017", "receive"=>"05/30/2017"}, "commit"=>"Update Project", "id"=>"22"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "projects" SET "receive" = $1, "updated_at" = $2 WHERE "projects"."id" = $3[0m  [["receive", "05/30/2017"], ["updated_at", "2017-05-22 07:14:13.141368"], ["id", 22]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 00:14:13 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 145ms (Views: 143.2ms | ActiveRecord: 0.3ms)
+
+

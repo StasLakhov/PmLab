@@ -18,7 +18,7 @@
     </p>
 
     <p>
-
+      <%= f.label :startdate %><br>
       <%= f.text_field :startdate, data:{ provide:'datepicker' } %>
     </p>
 
@@ -27,6 +27,10 @@
       <%= f.text_field :enddate, data:{ provide:'datepicker' } %>
     </p>
 
+    <p>
+      <%= f.label :receive %><br>
+      <%= f.text_field :receive, data:{ provide:'datepicker' } %>
+    </p>
 
      <p>
       <%= f.submit %>
