@@ -8550,3 +8550,3095 @@ Processing by ProjectsController#index as HTML
 Completed 200 OK in 145ms (Views: 143.2ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 00:16:00 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (9.9ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 543ms (Views: 519.8ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-22 00:16:18 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7AUWL4G0cKPqkyFyAEJbOXnu4hQlPvowvmCSq153fPTQy38S89ICXTMRqWvSEMdqp0zoqdQISGaIO664wZC8gg==", "project"=>{"name"=>"receive", "description"=>"date", "status"=>"Active", "startdate"=>"05/29/2017", "enddate"=>"05/30/2017", "receive"=>"05/31/2017"}, "commit"=>"Create Project"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (36.6ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "created_at", "updated_at", "status", "startdate", "enddate", "receive") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "receive"], ["description", "date"], ["created_at", "2017-05-22 07:16:18.843383"], ["updated_at", "2017-05-22 07:16:18.843383"], ["status", "Active"], ["startdate", "05/29/2017"], ["enddate", "05/30/2017"], ["receive", "05/31/2017"]]
+  [1m[35m (10.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 68ms (ActiveRecord: 52.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 00:16:18 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 141ms (Views: 140.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/25" for 127.0.0.1 at 2017-05-22 00:16:30 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 168ms (Views: 150.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/25/edit" for 127.0.0.1 at 2017-05-22 00:16:32 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (3.3ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 142ms (Views: 139.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 00:16:33 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 166ms (Views: 164.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/25/edit" for 127.0.0.1 at 2017-05-22 00:17:43 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.9ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 120ms (Views: 118.0ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/projects/25" for 127.0.0.1 at 2017-05-22 00:17:50 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EL/NmRTlIagOSsFwu8eKyjCEqgeu+/Y1ww/O6tAEwwpmMgJMs5ynOEespf4qNz2yN984/tovi2srqSEOkggopQ==", "project"=>{"name"=>"receive", "description"=>"date", "status"=>"Active", "startdate"=>"05/29/2017", "enddate"=>"05/30/2017", "receive"=>""}, "commit"=>"Update Project", "id"=>"25"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "projects" SET "receive" = $1, "updated_at" = $2 WHERE "projects"."id" = $3[0m  [["receive", ""], ["updated_at", "2017-05-22 07:17:50.189268"], ["id", 25]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 7ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 00:17:50 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 112ms (Views: 110.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/22/edit" for 127.0.0.1 at 2017-05-22 00:17:54 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.9ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 115ms (Views: 113.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/projects/22" for 127.0.0.1 at 2017-05-22 00:17:58 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ec40qI8kCFv4riRFY8XyMfcXQ32cNRwlz80k5Xl1RsRDoaP87KVqbH+Z68wpVnTmo6R1IDvMXXdkz85DijOJiA==", "project"=>{"name"=>"q", "description"=>"q", "status"=>"Done", "startdate"=>"05/30/2017", "enddate"=>"", "receive"=>"05/30/2017"}, "commit"=>"Update Project", "id"=>"22"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "projects" SET "enddate" = $1, "updated_at" = $2 WHERE "projects"."id" = $3[0m  [["enddate", ""], ["updated_at", "2017-05-22 07:17:58.814114"], ["id", 22]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 00:17:58 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 112ms (Views: 111.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/22" for 127.0.0.1 at 2017-05-22 00:22:22 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 111ms (Views: 107.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 00:22:25 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 110ms (Views: 106.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/16/edit" for 127.0.0.1 at 2017-05-22 01:04:29 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (8.0ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 160ms (Views: 147.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 01:04:32 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 98ms (Views: 95.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects/19/edit" for 127.0.0.1 at 2017-05-22 01:06:52 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (6.2ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 134ms (Views: 128.2ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/projects/19" for 127.0.0.1 at 2017-05-22 01:07:02 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FoodoOwmpu3HPIFpgbIzpQEiKPBfMgo2vjQ2G2bTaa/2Cu0v466LyanG7TykE2iKctrn0+gNnr4laxZq+rktpQ==", "project"=>{"name"=>"Project", "description"=>"1", "status"=>"Active", "startdate"=>"05/30/2017", "enddate"=>"05/23/2017", "receive"=>""}, "commit"=>"Update Project", "id"=>"19"}
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "projects" SET "name" = $1, "description" = $2, "receive" = $3, "updated_at" = $4 WHERE "projects"."id" = $5[0m  [["name", "Project"], ["description", "1"], ["receive", ""], ["updated_at", "2017-05-22 08:07:02.060486"], ["id", 19]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 13ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 01:07:02 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 119ms (Views: 116.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/22/edit" for 127.0.0.1 at 2017-05-22 01:07:05 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (5.6ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 127ms (Views: 124.5ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/projects/22" for 127.0.0.1 at 2017-05-22 01:07:15 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"An7o+exNcUzXkJnb33Zh3sa0dLva5IQApMjTQ8ooZIc4EX+tj8wTe1CnVlKV5ecJkgdC5n0dxVIPyjnlOW6ryw==", "project"=>{"name"=>"Project", "description"=>"2", "status"=>"Done", "startdate"=>"05/30/2017", "enddate"=>"", "receive"=>"05/30/2017"}, "commit"=>"Update Project", "id"=>"22"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "projects" SET "name" = $1, "description" = $2, "updated_at" = $3 WHERE "projects"."id" = $4[0m  [["name", "Project"], ["description", "2"], ["updated_at", "2017-05-22 08:07:15.331152"], ["id", 22]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 8ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 01:07:15 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 93ms (Views: 91.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/25/edit" for 127.0.0.1 at 2017-05-22 01:07:16 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (3.5ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 118ms (Views: 112.6ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/projects/25" for 127.0.0.1 at 2017-05-22 01:07:26 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E15Ti7b1Aq38P5I/intEKgieYgTdDxWPZIRfvbcMQ/5l05xeEYyEPbXZ9rEbi/NSD8Xw/anbaNGMIrBZ9QCoUQ==", "project"=>{"name"=>"Project", "description"=>"3", "status"=>"Active", "startdate"=>"05/29/2017", "enddate"=>"05/30/2017", "receive"=>""}, "commit"=>"Update Project", "id"=>"25"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "projects" SET "name" = $1, "description" = $2, "updated_at" = $3 WHERE "projects"."id" = $4[0m  [["name", "Project"], ["description", "3"], ["updated_at", "2017-05-22 08:07:26.584947"], ["id", 25]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 10ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 01:07:26 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 126ms (Views: 125.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/21/edit" for 127.0.0.1 at 2017-05-22 01:07:29 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (8.9ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 126ms (Views: 122.5ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/projects/21" for 127.0.0.1 at 2017-05-22 01:07:34 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xwysO/PArXQW89L7QF2s44i4Y8ipepOoTEXAhHKZaCPm8ijCP3xx/jTINmCpVvxDb+v9LmdnTlX4pL9LRgjBPQ==", "project"=>{"name"=>"Project", "description"=>"4", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receive"=>"05/16/2017"}, "commit"=>"Update Project", "id"=>"21"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "projects" SET "name" = $1, "description" = $2, "updated_at" = $3 WHERE "projects"."id" = $4[0m  [["name", "Project"], ["description", "4"], ["updated_at", "2017-05-22 08:07:34.269908"], ["id", 21]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 9ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 01:07:34 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 135ms (Views: 133.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/18/edit" for 127.0.0.1 at 2017-05-22 01:07:36 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (4.4ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 106ms (Views: 101.3ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/projects/18" for 127.0.0.1 at 2017-05-22 01:07:41 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"993jog+qlVt2bSrzEYNWjLWg+gaeNb5pu2n6JWxNAxFUpwa3KB2WbIdvJRzlLnvpR5SqGudk4PGejtayQ2sXCA==", "project"=>{"name"=>"Project", "description"=>"5", "status"=>"Waiting...", "startdate"=>"06/10/2017", "enddate"=>"06/10/2017", "receive"=>""}, "commit"=>"Update Project", "id"=>"18"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "projects" SET "name" = $1, "description" = $2, "receive" = $3, "updated_at" = $4 WHERE "projects"."id" = $5[0m  [["name", "Project"], ["description", "5"], ["receive", ""], ["updated_at", "2017-05-22 08:07:41.560098"], ["id", 18]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 14ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 01:07:41 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 108ms (Views: 105.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/3/edit" for 127.0.0.1 at 2017-05-22 01:07:43 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (7.0ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 107ms (Views: 102.5ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/projects/3" for 127.0.0.1 at 2017-05-22 01:07:49 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SSv7DrGjIwgI4lgQSsFFl3BQ6Te13O1XBJXBLRMZROmMbHSvoqPbB4wZBp89teoyGG6OOM89ejXXhUIewanwkg==", "project"=>{"name"=>"Project", "description"=>"6", "status"=>"Waiting...", "startdate"=>"05/30/2017", "enddate"=>"05/31/2017", "receive"=>""}, "commit"=>"Update Project", "id"=>"3"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "projects" SET "name" = $1, "description" = $2, "receive" = $3, "updated_at" = $4 WHERE "projects"."id" = $5[0m  [["name", "Project"], ["description", "6"], ["receive", ""], ["updated_at", "2017-05-22 08:07:49.020845"], ["id", 3]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 10ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 01:07:49 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 107ms (Views: 104.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/8/edit" for 127.0.0.1 at 2017-05-22 01:07:52 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (3.4ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 116ms (Views: 113.3ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/projects/8" for 127.0.0.1 at 2017-05-22 01:07:57 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a1o7v4E6cdsj+T9wC51ZEx/DF4mFEKY0JPImaPhjIVxKZKig2VFx2rgFpeqbWznqOZRnSHNSkJjyHWxMG1JUFA==", "project"=>{"name"=>"Project", "description"=>"7", "status"=>"Waiting...", "startdate"=>"05/30/2017", "enddate"=>"05/24/2017", "receive"=>""}, "commit"=>"Update Project", "id"=>"8"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "projects" SET "name" = $1, "description" = $2, "receive" = $3, "updated_at" = $4 WHERE "projects"."id" = $5[0m  [["name", "Project"], ["description", "7"], ["receive", ""], ["updated_at", "2017-05-22 08:07:57.157450"], ["id", 8]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 8ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 01:07:57 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 99ms (Views: 97.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/16/edit" for 127.0.0.1 at 2017-05-22 01:07:59 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (4.5ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 109ms (Views: 101.9ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/projects/16" for 127.0.0.1 at 2017-05-22 01:08:06 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z24vwBxu7w2dv0dtFV3jDs4KdtTHmRxq0XE2Pehis1DuJPL3Qbi1Iq0deHNWi2+G5zsHSqxRFKH6n+ZCvsCpug==", "project"=>{"name"=>"Project", "description"=>"8", "status"=>"Active", "startdate"=>"06/07/2017", "enddate"=>"05/02/2017", "receive"=>""}, "commit"=>"Update Project", "id"=>"16"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE "projects" SET "name" = $1, "description" = $2, "receive" = $3, "updated_at" = $4 WHERE "projects"."id" = $5[0m  [["name", "Project"], ["description", "8"], ["receive", ""], ["updated_at", "2017-05-22 08:08:07.004596"], ["id", 16]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 11ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 01:08:07 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 108ms (Views: 106.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/17/edit" for 127.0.0.1 at 2017-05-22 01:08:09 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (4.6ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 103ms (Views: 99.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/projects/17" for 127.0.0.1 at 2017-05-22 01:08:14 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LVcJSmRTnCDHZLMwfekXPiuAXtq+UjjVR7/4C3iIZrx5OHwE6HIE8ivIqWNcC4BvlxBxVAMSNP92DTloSiaLzA==", "project"=>{"name"=>"Project", "description"=>"9", "status"=>"Active", "startdate"=>"05/03/2017", "enddate"=>"05/01/2017", "receive"=>""}, "commit"=>"Update Project", "id"=>"17"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "projects" SET "name" = $1, "description" = $2, "receive" = $3, "updated_at" = $4 WHERE "projects"."id" = $5[0m  [["name", "Project"], ["description", "9"], ["receive", ""], ["updated_at", "2017-05-22 08:08:14.189964"], ["id", 17]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 10ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 01:08:14 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 129ms (Views: 127.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/24/edit" for 127.0.0.1 at 2017-05-22 01:08:19 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (9.2ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 110ms (Views: 105.4ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/projects/24" for 127.0.0.1 at 2017-05-22 01:08:24 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iDZqsW7w462xILU0X1Dj2P2Vis7BPUHNF4g/KNXA6FewO+P0/KmUKrXEUoiSnGiZSUScsrGtnQ913Aq7pqzQ3w==", "project"=>{"name"=>"Project", "description"=>"10", "status"=>"Waiting...", "startdate"=>"05/30/2017", "enddate"=>"05/23/2017", "receive"=>""}, "commit"=>"Update Project", "id"=>"24"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "projects" SET "name" = $1, "description" = $2, "receive" = $3, "updated_at" = $4 WHERE "projects"."id" = $5[0m  [["name", "Project"], ["description", "10"], ["receive", ""], ["updated_at", "2017-05-22 08:08:24.036869"], ["id", 24]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 10ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 01:08:24 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 120ms (Views: 118.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/23/edit" for 127.0.0.1 at 2017-05-22 01:08:26 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (2.4ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 84ms (Views: 82.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/projects/23" for 127.0.0.1 at 2017-05-22 01:08:32 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tRTg6KiH1lFNhnnDjfR/qhAoKSB5ZLNxPQQNVtCZhXS4bVbpbsLVbGayVOHlFPVFvLUcQvI6Es8uNyVcU9DYmg==", "project"=>{"name"=>"Project", "description"=>"11", "status"=>"Done", "startdate"=>"05/30/2017", "enddate"=>"05/30/2017", "receive"=>""}, "commit"=>"Update Project", "id"=>"23"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "projects" SET "name" = $1, "description" = $2, "receive" = $3, "updated_at" = $4 WHERE "projects"."id" = $5[0m  [["name", "Project"], ["description", "11"], ["receive", ""], ["updated_at", "2017-05-22 08:08:32.400176"], ["id", 23]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 01:08:32 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 98ms (Views: 97.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 01:09:01 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (3.1ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 94ms (Views: 92.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 01:09:15 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 119ms (Views: 116.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/23/edit" for 127.0.0.1 at 2017-05-22 01:11:02 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (7.0ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 113ms (Views: 108.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 01:11:46 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 133ms (Views: 129.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/19" for 127.0.0.1 at 2017-05-22 02:05:54 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProject Load (2.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 567ms (Views: 500.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 02:05:55 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (39.5ms)
+Completed 200 OK in 248ms (Views: 238.5ms | ActiveRecord: 0.8ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5945696501651356170);[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCustomers (20170522090914)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (273.5ms)[0m  [1m[35mCREATE TABLE "customers" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170522090914"]]
+  [1m[35m (9.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5945696501651356170)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5945696501651356170);[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5945696501651356170)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5945696501651356170);[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNameColumnToCustomer (20170522091249)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (37.7ms)[0m  [1m[35mALTER TABLE "customers" ADD "customer" character varying[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170522091249"]]
+  [1m[35m (18.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(5945696501651356170)[0m
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5945696501651356170);[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameColumnCustomerToName (20170522091549)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (56.3ms)[0m  [1m[35mALTER TABLE "customer" RENAME COLUMN "customer" TO "name"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5945696501651356170)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5945696501651356170);[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameColumnCustomerToName (20170522091549)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.1ms)[0m  [1m[35mALTER TABLE "customers" RENAME COLUMN "customer" TO "name"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170522091549"]]
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5945696501651356170)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 02:18:55 -0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/customers"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 02:19:23 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for CustomersController):
+  
+actionpack (5.1.1) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.1) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.1) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.1) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.1) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.1) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.1) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 02:28:05 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 4016ms (Views: 3993.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2017-05-22 02:28:12 -0700
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/_form.html.erb (50.2ms) [cache miss]
+  Rendered customers/new.html.erb within layouts/application (51.4ms)
+Completed 200 OK in 295ms (Views: 279.7ms | ActiveRecord: 5.6ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2017-05-22 02:28:15 -0700
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pwnvFBDtt0OzZ3TMNgOs9+5KZBAF2LpcBW0j6oI4oR+jo5adHYuM3rhW7dtDAvyymdd/sSLs6KqPEgzMCDQxLw==", "customer"=>{"name"=>"awgeaewga"}, "commit"=>"Create Customer"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "customers" ("created_at", "updated_at", "name") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-05-22 09:28:15.125524"], ["updated_at", "2017-05-22 09:28:15.125524"], ["name", "awgeaewga"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 9ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 02:28:15 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 144ms (Views: 127.1ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2017-05-22 02:28:55 -0700
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EFxk4BOv2eZd7C4JrgsdGbtk4TK2SbEutB55fhkAC5Wl9OfWekKYsk8IhL+PTgFVHXcBHUjZpO9sIvKFrWEBdA==", "customer"=>{"name"=>"awgeaewga"}, "commit"=>"Create Customer"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "customers" ("created_at", "updated_at", "name") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-05-22 09:28:55.663248"], ["updated_at", "2017-05-22 09:28:55.663248"], ["name", "awgeaewga"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 5.7ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"customers"}, missing required keys: [:id]):
+  
+app/controllers/customers_controller.rb:21:in `create'
+Started POST "/customers" for 127.0.0.1 at 2017-05-22 02:29:30 -0700
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EFxk4BOv2eZd7C4JrgsdGbtk4TK2SbEutB55fhkAC5Wl9OfWekKYsk8IhL+PTgFVHXcBHUjZpO9sIvKFrWEBdA==", "customer"=>{"name"=>"awgeaewga"}, "commit"=>"Create Customer"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "customers" ("created_at", "updated_at", "name") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-05-22 09:29:30.328696"], ["updated_at", "2017-05-22 09:29:30.328696"], ["name", "awgeaewga"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/customers
+Completed 302 Found in 13ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 02:29:30 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (315.9ms)
+Completed 500 Internal Server Error in 319ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `project' for #<#<Class:0x007f8268f459b0>:0x007f8268f3cec8>
+Did you mean?  project_url):
+     8: 
+     9:   <% @customers.each do |customer| %>
+    10:       <tr>
+    11:         <td><%= project.name %></td>
+    12:         <td><%= link_to 'Open', customer_path(customer), class: "btn btn-default" %></td>
+    13:         <td><%= link_to 'Edit', edit_customer_path(customer), class: "btn btn-default" %></td>
+    14:         <td><%= link_to 'Delete', customer,
+  
+app/views/customers/index.html.erb:11:in `block in _app_views_customers_index_html_erb___4372075514938122986_70099041663020'
+app/views/customers/index.html.erb:9:in `_app_views_customers_index_html_erb___4372075514938122986_70099041663020'
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 02:29:48 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 110ms (Views: 107.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers/1" for 127.0.0.1 at 2017-05-22 02:29:52 -0700
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering customers/show.html.erb within layouts/application
+  Rendered customers/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 238ms (Views: 122.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 02:29:53 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 166ms (Views: 164.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/1/edit" for 127.0.0.1 at 2017-05-22 02:29:54 -0700
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (1.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering customers/edit.html.erb within layouts/application
+  Rendered customers/_form.html.erb (4.2ms) [cache miss]
+  Rendered customers/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 146ms (Views: 138.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 02:29:56 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (1.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 117ms (Views: 113.2ms | ActiveRecord: 1.5ms)
+
+
+Started DELETE "/customers/1" for 127.0.0.1 at 2017-05-22 02:29:58 -0700
+Processing by CustomersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"226/XMiX1Aro0MSPvMnelmqDO+zpQ7oNHPq5iNNeifZuxjxqoXqVXvo0bjmdjMLazJDbwxfTr8zExjJzZz+DFw==", "id"=>"1"}
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = $1[0m  [["id", 1]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/customers
+Completed 302 Found in 9ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 02:29:58 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 136ms (Views: 134.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2017-05-22 02:30:34 -0700
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/_form.html.erb (2.1ms) [cache miss]
+  Rendered customers/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 107ms (Views: 103.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2017-05-22 02:30:40 -0700
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PVqeghtVzkkC/t1osJoKAA1TP8srphVezF+wlmWYAfA58OcLFjP11AnPRH/Fm1pFes4kagySR6hGIJ+w75SRwA==", "customer"=>{"name"=>"Some customer"}, "commit"=>"Create Customer"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "customers" ("created_at", "updated_at", "name") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-05-22 09:30:40.805419"], ["updated_at", "2017-05-22 09:30:40.805419"], ["name", "Some customer"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/customers
+Completed 302 Found in 42ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 02:30:40 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (1.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 124ms (Views: 121.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 02:31:34 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (617.6ms)
+Completed 500 Internal Server Error in 634ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `customer' for #<#<Class:0x007f82649ebd38>:0x007f82649ea0c8>
+Did you mean?  customer_url):
+    20:         <td><%= project.startdate %></td>
+    21:         <td><%= project.enddate %></td>
+    22:         <td><%= project.receive %></td>
+    23:         <td><%= customer.name %></td>
+    24:         <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
+    25:         <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
+    26:         <td><%= link_to 'Delete', project,
+  
+app/views/projects/index.html.erb:23:in `block in _app_views_projects_index_html_erb___3867947305753876993_70099005301560'
+app/views/projects/index.html.erb:15:in `_app_views_projects_index_html_erb___3867947305753876993_70099005301560'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 02:35:39 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (373.0ms)
+Completed 500 Internal Server Error in 434ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `customer' for #<#<Class:0x007f82698d5110>:0x007f826992f430>
+Did you mean?  customer_url):
+    20:         <td><%= project.startdate %></td>
+    21:         <td><%= project.enddate %></td>
+    22:         <td><%= project.receive %></td>
+    23:         <td><%= customer.name %></td>
+    24:         <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
+    25:         <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
+    26:         <td><%= link_to 'Delete', project,
+  
+app/views/projects/index.html.erb:23:in `block in _app_views_projects_index_html_erb___3867947305753876993_70099046673620'
+app/views/projects/index.html.erb:15:in `_app_views_projects_index_html_erb___3867947305753876993_70099046673620'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 02:36:12 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (662.5ms)
+Completed 500 Internal Server Error in 670ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `customer' for #<#<Class:0x007f8268e77880>:0x007f8268e5f0f0>
+Did you mean?  customer_url):
+    20:         <td><%= project.startdate %></td>
+    21:         <td><%= project.enddate %></td>
+    22:         <td><%= project.receive %></td>
+    23:         <td><%= customer.name %></td>
+    24:         <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
+    25:         <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
+    26:         <td><%= link_to 'Delete', project,
+  
+app/views/projects/index.html.erb:23:in `block in _app_views_projects_index_html_erb___3867947305753876993_70099041281800'
+app/views/projects/index.html.erb:15:in `_app_views_projects_index_html_erb___3867947305753876993_70099041281800'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 02:42:38 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    20:         <td><%= project.startdate %></td>
+    21:         <td><%= project.enddate %></td>
+    22:         <td><%= project.receive %></td>
+    23:         <td><%= @customer.name %></td>
+    24:         <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
+    25:         <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
+    26:         <td><%= link_to 'Delete', project,
+  
+app/views/projects/index.html.erb:23:in `block in _app_views_projects_index_html_erb___3867947305753876993_70099051745820'
+app/views/projects/index.html.erb:15:in `_app_views_projects_index_html_erb___3867947305753876993_70099051745820'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 02:44:51 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (27.1ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    29:         </td>
+    30:       </tr>
+    31:   <% end %>
+    32:   <td><%= @customer.name %></td>
+    33: </table>
+    34: 
+    35: 
+  
+app/views/projects/index.html.erb:32:in `_app_views_projects_index_html_erb___3867947305753876993_70099044071380'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 02:45:01 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4072.5ms)
+Completed 500 Internal Server Error in 4077ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `customer' for #<#<Class:0x007f8268e77880>:0x007f826ab46bc8>
+Did you mean?  customer_url):
+    29:         </td>
+    30:       </tr>
+    31:   <% end %>
+    32:   <td><%= customer.name %></td>
+    33: </table>
+    34: 
+    35: 
+  
+app/views/projects/index.html.erb:32:in `_app_views_projects_index_html_erb___3867947305753876993_70099056343760'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 02:45:26 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 175ms (Views: 172.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/17/edit" for 127.0.0.1 at 2017-05-22 02:53:18 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (16.8ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 203ms (Views: 173.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 02:53:19 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 125ms (Views: 122.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 03:03:35 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (5.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 322ms (Views: 301.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 03:03:41 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 182ms (Views: 153.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 03:06:58 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 144ms (Views: 142.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projectss" for 127.0.0.1 at 2017-05-22 03:07:03 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/projectss"):
+  
+actionpack (5.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.1) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.1) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 03:07:09 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 154ms (Views: 151.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 03:07:11 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (6.5ms)
+  Rendered projects/new.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `all' for :Product:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= customer_select(:project, :customer_id, :Product.all, :id, :name) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099008506760'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099008506760'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099008564060'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 03:08:05 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (5.0ms)
+  Rendered projects/new.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `all' for :Project:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= customer_select(:project, :customer_id, :Project.all, :id, :name) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099049395580'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099049395580'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099049512760'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 03:08:23 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (6.0ms)
+  Rendered projects/new.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `all' for :Projects:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= customer_select(:project, :customer_id, :Projects.all, :id, :name) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099005725220'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099005725220'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099005741320'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 03:08:46 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (1.6ms)
+  Rendered projects/new.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/stas/PmLab/app/views/projects/_form.html.erb:36: syntax error, unexpected '(', expecting ')'
+fer.append=( @customer_select(:project, :customer_id, :Proje
+                              ^
+/home/stas/PmLab/app/views/projects/_form.html.erb:36: syntax error, unexpected ',', expecting &. or :: or '[' or '.'
+ustomer_id, :Project.all, :id, :name) );@output_buffer.safe_
+                              ^
+/home/stas/PmLab/app/views/projects/_form.html.erb:36: syntax error, unexpected ')', expecting keyword_end
+d, :Project.all, :id, :name) );@output_buffer.safe_append='
+                              ^
+/home/stas/PmLab/app/views/projects/_form.html.erb:49: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/projects/_form.html.erb:36: syntax error, unexpected '(', expecting ')'
+app/views/projects/_form.html.erb:36: syntax error, unexpected ',', expecting &. or :: or '[' or '.'
+app/views/projects/_form.html.erb:36: syntax error, unexpected ')', expecting keyword_end
+app/views/projects/_form.html.erb:49: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099042170500'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 03:09:11 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (3.4ms)
+  Rendered projects/new.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `all' for :Project:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= customer_select(:project, :customer_id, :Project.all, :id, :name) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099055175100'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099055175100'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099055216980'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 03:09:26 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (9.8ms)
+  Rendered projects/new.html.erb within layouts/application (11.8ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `all' for :@Project:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= customer_select(:project, :customer_id, :@Project.all, :id, :name) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099008511560'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099008511560'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099008596460'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 03:11:54 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (3.7ms)
+  Rendered projects/new.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `all' for :Project:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= select(:project, :customer_id, :Project.all, :id, :name) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099048491420'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099048491420'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099048510800'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 03:13:07 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (4.6ms)
+  Rendered projects/new.html.erb within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `all' for :Project:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= customer_select(:project, :customer_id, :Project.all, :id, :name) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099005571360'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099005571360'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099005587840'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 03:13:46 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (8.6ms)
+  Rendered projects/new.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `all' for :Customer:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= customer_select(:project, :customer_id, :Customer.all, :id, :name) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099036630500'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099036630500'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099036757320'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 03:14:03 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (252.1ms)
+  Rendered projects/new.html.erb within layouts/application (252.9ms)
+Completed 500 Internal Server Error in 255ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `customer_select' for #<#<Class:0x000000049b01a0>:0x007f826a97a498>
+Did you mean?  customer_url):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= customer_select(:project, :customer_id, :@customers, :id, :name) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099055351020'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099055351020'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099055400780'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 03:14:14 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (1.2ms)
+  Rendered projects/new.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/stas/PmLab/app/views/projects/_form.html.erb:36: syntax error, unexpected '(', expecting ')'
+fer.append=( @customer_select(:project, :customer_id, :@cust
+                              ^
+/home/stas/PmLab/app/views/projects/_form.html.erb:36: syntax error, unexpected ')', expecting keyword_end
+id, :@customers, :id, :name) );@output_buffer.safe_append='
+                              ^
+/home/stas/PmLab/app/views/projects/_form.html.erb:49: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/projects/_form.html.erb:36: syntax error, unexpected '(', expecting ')'
+app/views/projects/_form.html.erb:36: syntax error, unexpected ')', expecting keyword_end
+app/views/projects/_form.html.erb:49: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099004972040'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 03:14:22 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (11.8ms)
+  Rendered projects/new.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete' for :id:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= select(:project, :customer_id, :@customers, :id, :name) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099009198200'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099009198200'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099009256680'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 03:15:43 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (6.0ms)
+  Rendered projects/new.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete' for :name:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= select(:project, :customer_id, :@customers, :name) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099047446040'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099047446040'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099048019900'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 03:16:06 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (7.6ms)
+  Rendered projects/new.html.erb within layouts/application (9.0ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete' for :id:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= select(:project, :customer_params, :@customers, :id, :name) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099005159180'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099005159180'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099005222140'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 03:59:31 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (35.5ms)
+  Rendered projects/new.html.erb within layouts/application (86.1ms)
+Completed 500 Internal Server Error in 930ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 5, expected 1..4)):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= f.select(:project, :customer_id, :@customers, :id, :name) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099009762720'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099009762720'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_20222520'
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 04:00:01 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (490.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (695.8ms)
+Completed 200 OK in 3066ms (Views: 2062.4ms | ActiveRecord: 490.4ms)
+
+
+Started DELETE "/customers/3" for 127.0.0.1 at 2017-05-22 04:00:11 -0700
+Processing by CustomersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tt+yrMLooSaGMZO5JguRPRgjlk8bdXhcNSFzGjeVVfUDdzGaqwXgcpTVOQ8HTo1xvjB2YOXlbZ3tHfjhg/RfFA==", "id"=>"3"}
+  [1m[36mCustomer Load (22.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (34.0ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = $1[0m  [["id", 3]]
+  [1m[35m (14.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/customers
+Completed 302 Found in 90ms (ActiveRecord: 77.7ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 04:00:11 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 379ms (Views: 376.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/2/edit" for 127.0.0.1 at 2017-05-22 04:00:14 -0700
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering customers/edit.html.erb within layouts/application
+  Rendered customers/_form.html.erb (2.1ms) [cache miss]
+  Rendered customers/edit.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 1112ms (Views: 1085.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 04:00:16 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 146ms (Views: 144.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:00:40 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (20.3ms)
+  Rendered projects/new.html.erb within layouts/application (22.2ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `all' for :Customer:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= f.select(:project, :customer_id, :Customer.all, :id, :name) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099045517520'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099045517520'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099045596660'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:00:52 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (3.5ms)
+  Rendered projects/new.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `all' for :Customer:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= select(:project, :customer_id, :Customer.all, :id, :name) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099004873920'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099004873920'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099004966520'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:02:40 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (5.1ms)
+  Rendered projects/new.html.erb within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `all' for :Customer:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= select :project, :customer_id, :Customer.all, :id, :name %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099009384160'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099009384160'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099009441860'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:06:21 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (5.8ms)
+  Rendered projects/new.html.erb within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `all' for :Customer:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= select(:project, :Customer.all, :id, :name ) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099048478360'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099048478360'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099048506060'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:06:38 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (7.0ms)
+  Rendered projects/new.html.erb within layouts/application (8.7ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `all' for :@Customer:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= select(:project, :@Customer.all, :id, :name ) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099005240680'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099005240680'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099005252480'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:06:53 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (7.9ms)
+  Rendered projects/new.html.erb within layouts/application (9.4ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete' for :name:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= select(:project, :customer, :id, :name ) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_34475040'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_34475040'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_35762420'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:09:35 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (6.4ms)
+  Rendered projects/new.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `all' for :Customer:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= select(:project, :name, :Customer.all, :id, :name ) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099048501960'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099048501960'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099048735020'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:09:47 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (6.4ms)
+  Rendered projects/new.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= select(:project, :name ) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099005150960'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099005150960'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099005224300'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:10:13 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (11.4ms)
+  Rendered projects/new.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `@customers' for #<Project:0x007f826520a1e0>
+Did you mean?  customer
+               customer=):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= select(:project, :@customers ) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099009467460'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099009467460'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099009553960'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:10:46 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (3.7ms)
+  Rendered projects/new.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `all' for :Customer:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= select(:project, :Customer.all ) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099045133720'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099045133720'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099045265020'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:10:59 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (10.2ms)
+  Rendered projects/new.html.erb within layouts/application (11.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `Customer' for #<Project:0x007f826ab2b490>
+Did you mean?  customer
+               customer=):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= select(:project, :Customer ) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099056197040'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099056197040'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099056283480'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:11:08 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (149.3ms)
+  Rendered projects/new.html.erb within layouts/application (151.4ms)
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= select(:project, :customer ) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099006938120'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099006938120'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099007021520'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:11:18 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (7.1ms)
+  Rendered projects/new.html.erb within layouts/application (8.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `first' for :name:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= select(:project, :customer, :name ) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099039855360'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099039855360'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099040051040'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:11:33 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (5.8ms)
+  Rendered projects/new.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= select( :customer, :name ) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099052409960'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099052409960'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099052452140'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:13:44 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (6.3ms)
+  Rendered projects/new.html.erb within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= select( :customer, :name ) %>
+    37:       <%= options_from_customer_for_select(Customer.all, :id, :name) %>
+    38:     </p>>
+    39: 
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099005437000'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099005437000'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099005454220'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:13:57 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (604.7ms)
+  Rendered projects/new.html.erb within layouts/application (605.8ms)
+Completed 500 Internal Server Error in 608ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `options_from_customer_for_select' for #<#<Class:0x000000049b01a0>:0x007f82652421f8>
+Did you mean?  options_from_collection_for_select):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= options_from_customer_for_select(Customer.all, :id, :name) %>
+    37:     </p>>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099009626880'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099009626880'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099009673400'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:14:17 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (5.6ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 148ms (Views: 146.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:14:36 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (8.3ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 147ms (Views: 144.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 04:14:40 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 139ms (Views: 137.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:15:27 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (12.4ms)
+  Rendered projects/new.html.erb within layouts/application (13.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 3, expected 5..7)):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= collection_select(Customer.all, :id, :name) %>
+    37:     </p>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_27833460'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_27833460'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_28191800'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:16:38 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (3.9ms)
+  Rendered projects/new.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `all' for :Customer:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= collection_select(:project, :customer_id, :Customer.all, :id, :name) %>
+    37:     </p>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099046855540'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099046855540'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099047010320'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:16:39 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (4.8ms)
+  Rendered projects/new.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `all' for :Customer:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= collection_select(:project, :customer_id, :Customer.all, :id, :name) %>
+    37:     </p>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099056158940'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099056158940'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099056218720'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:17:53 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (50.1ms)
+  Rendered projects/new.html.erb within layouts/application (52.1ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `customer_id' for #<Project:0x007f8264d87bb8>
+Did you mean?  customer
+               customer=):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= collection_select(:project, :customer_id, Customer.all, :id, :name) %>
+    37:     </p>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099007139300'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099007139300'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb___1590907444067068975_70099007189700'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:18:13 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (7.9ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 129ms (Views: 126.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2017-05-22 04:18:23 -0700
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/_form.html.erb (2.2ms) [cache miss]
+  Rendered customers/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 126ms (Views: 115.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2017-05-22 04:18:30 -0700
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B49fK4O0XXBtL0aaQwe+J6Knh4Q3FkYugtV4Hac0p1kDJSaijtJm7WYe3402Bu5i1TqcJRAiFNgIqlc7LTg3aQ==", "customer"=>{"name"=>"select"}, "commit"=>"Create Customer"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (62.1ms)[0m  [1m[32mINSERT INTO "customers" ("created_at", "updated_at", "name") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-05-22 11:18:30.299479"], ["updated_at", "2017-05-22 11:18:30.299479"], ["name", "select"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/customers
+Completed 302 Found in 83ms (ActiveRecord: 63.9ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 04:18:30 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 122ms (Views: 120.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:18:33 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (6.2ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 126ms (Views: 124.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-22 04:18:45 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eycVw+Bmp+u0h2TQw57UEn+F0SdgL8WcmetDhUBVNjDOj5b1iYvmv6Zjzmbi28he2ZYxCJ6/0F1B18h+9DQ80Q==", "project"=>{"name"=>"select", "description"=>"customer", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receive"=>"", "customer"=>"5"}, "commit"=>"Create Project"}
+Unpermitted parameter: :customer
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 10ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:18:46 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 117ms (Views: 103.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:18:58 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (9.8ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 114ms (Views: 111.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-22 04:19:13 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FgfSFx2OwUE9YAb1N/0D5enyBNf7dghxuMNiiYpL21Iqybsqb+izv+Tijuzlr5+2N1AOagpAuieOmF6aFawbJA==", "project"=>{"name"=>"Project", "description"=>"7", "status"=>"Waiting...", "startdate"=>"05/30/2017", "enddate"=>"05/30/2017", "receive"=>"05/30/2017", "customer"=>"5"}, "commit"=>"Create Project"}
+Unpermitted parameter: :customer
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 12ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:19:13 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 116ms (Views: 114.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:20:30 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 114ms (Views: 112.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/23/edit" for 127.0.0.1 at 2017-05-22 04:20:31 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProject Load (17.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (20.6ms)
+  Rendered projects/edit.html.erb within layouts/application (21.5ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 18.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `@customer' for #<Project:0x007f8264f5f198>
+Did you mean?  customer
+               customer=):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= collection_select(:project, :@customer, Customer.all, :id, :name) %>
+    37:     </p>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099008016700'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099008016700'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb___2290812058824951576_70099008155140'
+Started GET "/projects/23/edit" for 127.0.0.1 at 2017-05-22 04:20:41 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (6.4ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 146ms (Views: 144.1ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/projects/23" for 127.0.0.1 at 2017-05-22 04:20:48 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ue6rxWBIwioZ7HkFn5BSKCTqC5lJA4diEIL5UewQTp3kRijzCaWDfgsI07O+1U5kgvnrtreTkqPIvnKqWHFEfA==", "project"=>{"name"=>"Project", "description"=>"11", "status"=>"Done", "startdate"=>"05/30/2017", "enddate"=>"05/30/2017", "receive"=>"", "customer"=>"5"}, "commit"=>"Update Project", "id"=>"23"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+Unpermitted parameter: :customer
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+No template found for ProjectsController#update, rendering head :no_content
+Completed 204 No Content in 20ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:20:55 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (65.1ms)
+Completed 200 OK in 639ms (Views: 637.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/projects/23/edit" for 127.0.0.1 at 2017-05-22 04:21:12 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (1.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (10.8ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 129ms (Views: 124.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:21:15 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 137ms (Views: 134.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:21:55 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 123ms (Views: 121.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/19/edit" for 127.0.0.1 at 2017-05-22 04:21:58 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (4.1ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 124ms (Views: 122.1ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/projects/19" for 127.0.0.1 at 2017-05-22 04:22:02 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y1vYuCyDsAwMCEnLmYN9pQ8KzO7R0nKv5GuGv5Ch2gSD2yg3IwudKGLyJZ68IiaKfPIDzWbt5id/NKbODMueDg==", "project"=>{"name"=>"Project", "description"=>"1", "status"=>"Active", "startdate"=>"05/30/2017", "enddate"=>"05/23/2017", "receive"=>"", "customer"=>"5"}, "commit"=>"Update Project", "id"=>"19"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+Unpermitted parameter: :customer
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+No template found for ProjectsController#update, rendering head :no_content
+Completed 204 No Content in 15ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:22:17 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 123ms (Views: 120.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/19/edit" for 127.0.0.1 at 2017-05-22 04:22:19 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProject Load (2.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (8.2ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 156ms (Views: 143.8ms | ActiveRecord: 3.3ms)
+
+
+Started PATCH "/projects/19" for 127.0.0.1 at 2017-05-22 04:22:21 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UleuTE9x9ZaX9MMtSV/85htL2O2dXG/y7YiarnF070ey117DQPnYsvkOr3hs/qfJaLMXzipj+3p217rf7R6rTQ==", "project"=>{"name"=>"Project", "description"=>"1", "status"=>"Active", "startdate"=>"05/30/2017", "enddate"=>"05/23/2017", "receive"=>"", "customer"=>"2"}, "commit"=>"Update Project", "id"=>"19"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+Unpermitted parameter: :customer
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+No template found for ProjectsController#update, rendering head :no_content
+Completed 204 No Content in 21ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:22:23 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 136ms (Views: 134.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/23/edit" for 127.0.0.1 at 2017-05-22 04:22:25 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (8.6ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 131ms (Views: 127.2ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/projects/23" for 127.0.0.1 at 2017-05-22 04:22:26 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sTKjK1EsNQk94DEKCaUmhEEo1irH5Sx7LFWA59ngttS8SxUql2k2NBbUHChhRaxr7bXjSEy7jcU/ZqjtWqnrOg==", "project"=>{"name"=>"Project", "description"=>"11", "status"=>"Done", "startdate"=>"05/30/2017", "enddate"=>"05/30/2017", "receive"=>"", "customer"=>"2"}, "commit"=>"Update Project", "id"=>"23"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+Unpermitted parameter: :customer
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+No template found for ProjectsController#update, rendering head :no_content
+Completed 204 No Content in 22ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:22:27 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 106ms (Views: 103.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/19" for 127.0.0.1 at 2017-05-22 04:22:49 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 122ms (Views: 111.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:22:53 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 150ms (Views: 147.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:23:03 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (1.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (12.4ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 149ms (Views: 145.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-22 04:23:13 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pqyP1JrD9aJldgcutk7o68PDimhcW4UGMLr8b+Oq12yaYubp6KWHXLz0jzdkHHS4HWGA1a1tN1AG4cB8fE0XGg==", "project"=>{"name"=>"asv", "description"=>"asdvea", "status"=>"Waiting...", "startdate"=>"05/29/2017", "enddate"=>"05/23/2017", "receive"=>"05/30/2017", "customer"=>"2"}, "commit"=>"Create Project"}
+Unpermitted parameter: :customer
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 10ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:23:14 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 111ms (Views: 110.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:23:52 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    20:         <td><%= project.startdate %></td>
+    21:         <td><%= project.enddate %></td>
+    22:         <td><%= project.receive %></td>
+    23:         <td><%= @customer.name %></td>
+    24:         <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
+    25:         <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
+    26:         <td><%= link_to 'Delete', project,
+  
+app/views/projects/index.html.erb:23:in `block in _app_views_projects_index_html_erb___3867947305753876993_70099040912200'
+app/views/projects/index.html.erb:15:in `_app_views_projects_index_html_erb___3867947305753876993_70099040912200'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:24:19 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    20:         <td><%= project.startdate %></td>
+    21:         <td><%= project.enddate %></td>
+    22:         <td><%= project.receive %></td>
+    23:         <td><%= project.customer.name %></td>
+    24:         <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
+    25:         <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
+    26:         <td><%= link_to 'Delete', project,
+  
+app/views/projects/index.html.erb:23:in `block in _app_views_projects_index_html_erb___3867947305753876993_70099054077900'
+app/views/projects/index.html.erb:15:in `_app_views_projects_index_html_erb___3867947305753876993_70099054077900'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:24:42 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (737.7ms)
+Completed 500 Internal Server Error in 740ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `customer' for #<#<Class:0x000000049b01a0>:0x007f8264a3bc20>
+Did you mean?  customer_url):
+    20:         <td><%= project.startdate %></td>
+    21:         <td><%= project.enddate %></td>
+    22:         <td><%= project.receive %></td>
+    23:         <td><%= customer.name %></td>
+    24:         <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
+    25:         <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
+    26:         <td><%= link_to 'Delete', project,
+  
+app/views/projects/index.html.erb:23:in `block in _app_views_projects_index_html_erb___3867947305753876993_70099005465880'
+app/views/projects/index.html.erb:15:in `_app_views_projects_index_html_erb___3867947305753876993_70099005465880'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:25:01 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (1791.8ms)
+Completed 500 Internal Server Error in 1794ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `customer' for #<#<Class:0x000000049b01a0>:0x007f8264980ec0>
+Did you mean?  customer_url):
+    33: 
+    34: </table>
+    35: 
+    36: <td><%= customer.name %></td>
+    37: <p>
+    38:   <%= link_to new_project_path, class: "btn btn-default" do %>
+    39:     <i class="glyphicon glyphicon-plus-sign"></i> Add Project
+  
+app/views/projects/index.html.erb:36:in `_app_views_projects_index_html_erb___3867947305753876993_70099005083260'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:25:15 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (498.3ms)
+Completed 500 Internal Server Error in 500ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `customer' for #<#<Class:0x000000049b01a0>:0x007f8269fa4ea0>
+Did you mean?  customer_url):
+    33: 
+    34: </table>
+    35: 
+    36: <td><%= customer %></td>
+    37: <p>
+    38:   <%= link_to new_project_path, class: "btn btn-default" do %>
+    39:     <i class="glyphicon glyphicon-plus-sign"></i> Add Project
+  
+app/views/projects/index.html.erb:36:in `_app_views_projects_index_html_erb___3867947305753876993_70099050245220'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:25:29 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 278ms (Views: 276.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/23/edit" for 127.0.0.1 at 2017-05-22 04:25:33 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (5.0ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 133ms (Views: 130.2ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/projects/23" for 127.0.0.1 at 2017-05-22 04:25:46 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MUQjUtFt5brMwdbpOfkYw8yxBolNQewAoeENMlA+Hu08PZVTFyjmh+f1+8tRGZIsYCwz68YfTb6y0iU403dDAw==", "project"=>{"name"=>"Project", "description"=>"11", "status"=>"Done", "startdate"=>"05/30/2017", "enddate"=>"05/30/2017", "receive"=>"", "customer"=>"2"}, "commit"=>"Update Project", "id"=>"23"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+Unpermitted parameter: :customer
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+No template found for ProjectsController#update, rendering head :no_content
+Completed 204 No Content in 21ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:25:48 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 114ms (Views: 111.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/23/edit" for 127.0.0.1 at 2017-05-22 04:26:38 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (10.4ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 159ms (Views: 145.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:26:41 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 112ms (Views: 110.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:27:42 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 180ms (Views: 177.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects/23/edit" for 127.0.0.1 at 2017-05-22 04:27:43 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (8.4ms)
+  Rendered projects/edit.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for :name:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= f.collection_select(:project, :customer, Customer.all, :id, :name) %>
+    37:     </p>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099054321340'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099054321340'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb___2290812058824951576_70099054348720'
+Started GET "/projects/23/edit" for 127.0.0.1 at 2017-05-22 04:27:51 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (7.5ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 110ms (Views: 106.9ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/projects/23" for 127.0.0.1 at 2017-05-22 04:27:59 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LMRedzo9klBeSkDDAT7dRyq2fi8dD1+rRXczSQ8+NsuZbN1BU9DTBEyu6nUge8ELjKWeAOOfSmqdS7iyu188Kg==", "project"=>{"name"=>"Project", "description"=>"11", "status"=>"Done", "startdate"=>"05/30/2017", "enddate"=>"05/30/2017", "receive"=>"", "customer"=>"4"}, "commit"=>"Update Project", "id"=>"23"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+Unpermitted parameter: :customer
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+No template found for ProjectsController#update, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:28:02 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 114ms (Views: 111.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:28:10 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (4.3ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 109ms (Views: 108.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-22 04:28:11 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L+LZNfBK+0HrDlyU48HaWnAjf3ae0qvBep+0ZkIoXEMTLLAIgiyJvzKM1I0xk0YJroF1y2/kGZdMxIh13c+cNQ==", "project"=>{"name"=>"", "description"=>"", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receive"=>"", "customer"=>"2"}, "commit"=>"Create Project"}
+Unpermitted parameter: :customer
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 13ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:28:11 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 106ms (Views: 104.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:28:13 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (4.8ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 100ms (Views: 98.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-22 04:28:16 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tZEj0msur9P5tNcdUydK5GzD8YSnJSbj+o+NRWEUQmSJX0rvGUjdLSA2XwSBdda3smH7OVYTlLXM1LFW/vOCEg==", "project"=>{"name"=>"", "description"=>"", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receive"=>"", "customer"=>"4"}, "commit"=>"Create Project"}
+Unpermitted parameter: :customer
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 8ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:28:16 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 113ms (Views: 111.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 04:28:18 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (9.8ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 110ms (Views: 106.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-22 04:28:22 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CsOiPD8CRI8b5Fdr7t/Hcxjabt8bK/Rs3qExSC8APVo2DcsBTWQ2ccJm33I8jVsgxnhkYuodRjro+g1bsOf9LA==", "project"=>{"name"=>"erth", "description"=>"ewrth", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receive"=>"", "customer"=>"4"}, "commit"=>"Create Project"}
+Unpermitted parameter: :customer
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:28:22 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 108ms (Views: 106.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:31:43 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  Rendered projects/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/stas/PmLab/app/views/projects/index.html.erb:23: syntax error, unexpected tIVAR, expecting '('
+fer.append=( project.@customer );@output_buffer.safe_append=
+                              ^):
+  
+app/views/projects/index.html.erb:23: syntax error, unexpected tIVAR, expecting '('
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:32:06 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.8ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `call' for #<Project:0x007f8264e9edd0>
+Did you mean?  caller):
+    20:         <td><%= project.startdate %></td>
+    21:         <td><%= project.enddate %></td>
+    22:         <td><%= project.receive %></td>
+    23:         <td><%= project.(@customer) %></td>
+    24:         <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
+    25:         <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
+    26:         <td><%= link_to 'Delete', project,
+  
+app/views/projects/index.html.erb:23:in `block in _app_views_projects_index_html_erb___3867947305753876993_70099007888340'
+app/views/projects/index.html.erb:15:in `_app_views_projects_index_html_erb___3867947305753876993_70099007888340'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:32:18 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (335.5ms)
+Completed 500 Internal Server Error in 338ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `customer' for #<#<Class:0x000000049b01a0>:0x007f82697c9aa0>
+Did you mean?  customer_url):
+    20:         <td><%= project.startdate %></td>
+    21:         <td><%= project.enddate %></td>
+    22:         <td><%= project.receive %></td>
+    23:         <td><%= project.(customer) %></td>
+    24:         <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
+    25:         <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
+    26:         <td><%= link_to 'Delete', project,
+  
+app/views/projects/index.html.erb:23:in `block in _app_views_projects_index_html_erb___3867947305753876993_70099046126980'
+app/views/projects/index.html.erb:15:in `_app_views_projects_index_html_erb___3867947305753876993_70099046126980'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:32:30 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (16.4ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `call' for #<Project:0x007f82652560b8>
+Did you mean?  caller):
+    20:         <td><%= project.startdate %></td>
+    21:         <td><%= project.enddate %></td>
+    22:         <td><%= project.receive %></td>
+    23:         <td><%= project.(:customer) %></td>
+    24:         <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
+    25:         <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
+    26:         <td><%= link_to 'Delete', project,
+  
+app/views/projects/index.html.erb:23:in `block in _app_views_projects_index_html_erb___3867947305753876993_70099005142120'
+app/views/projects/index.html.erb:15:in `_app_views_projects_index_html_erb___3867947305753876993_70099005142120'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:32:50 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (464.3ms)
+Completed 500 Internal Server Error in 466ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `customer_id' for #<#<Class:0x000000049b01a0>:0x007f8269f2b8c0>
+Did you mean?  customer_url):
+    20:         <td><%= project.startdate %></td>
+    21:         <td><%= project.enddate %></td>
+    22:         <td><%= project.receive %></td>
+    23:         <td><%= project.(customer_id) %></td>
+    24:         <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
+    25:         <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
+    26:         <td><%= link_to 'Delete', project,
+  
+app/views/projects/index.html.erb:23:in `block in _app_views_projects_index_html_erb___3867947305753876993_70099049997040'
+app/views/projects/index.html.erb:15:in `_app_views_projects_index_html_erb___3867947305753876993_70099049997040'
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 04:33:16 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 152ms (Views: 138.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/5/edit" for 127.0.0.1 at 2017-05-22 04:33:18 -0700
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering customers/edit.html.erb within layouts/application
+  Rendered customers/_form.html.erb (2.0ms) [cache miss]
+  Rendered customers/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 168ms (Views: 140.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 04:33:19 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 127ms (Views: 123.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 04:34:07 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 155ms (Views: 152.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:34:08 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (758.2ms)
+Completed 500 Internal Server Error in 761ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `customer_params' for #<#<Class:0x000000049b01a0>:0x007f8269e5eb68>
+Did you mean?  customer_path):
+    20:         <td><%= project.startdate %></td>
+    21:         <td><%= project.enddate %></td>
+    22:         <td><%= project.receive %></td>
+    23:         <td><%= project.(customer_params) %></td>
+    24:         <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
+    25:         <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
+    26:         <td><%= link_to 'Delete', project,
+  
+app/views/projects/index.html.erb:23:in `block in _app_views_projects_index_html_erb___3867947305753876993_70099049604300'
+app/views/projects/index.html.erb:15:in `_app_views_projects_index_html_erb___3867947305753876993_70099049604300'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:34:27 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"customers"}, missing required keys: [:id]):
+    20:         <td><%= project.startdate %></td>
+    21:         <td><%= project.enddate %></td>
+    22:         <td><%= project.receive %></td>
+    23:         <td><%= project.(customer_path) %></td>
+    24:         <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
+    25:         <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
+    26:         <td><%= link_to 'Delete', project,
+  
+app/views/projects/index.html.erb:23:in `block in _app_views_projects_index_html_erb___3867947305753876993_70099009284520'
+app/views/projects/index.html.erb:15:in `_app_views_projects_index_html_erb___3867947305753876993_70099009284520'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:35:25 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (193.4ms)
+Completed 500 Internal Server Error in 196ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `Customer' for #<#<Class:0x000000049b01a0>:0x007f82694a56d0>
+Did you mean?  customer_url):
+    20:         <td><%= project.startdate %></td>
+    21:         <td><%= project.enddate %></td>
+    22:         <td><%= project.receive %></td>
+    23:         <td><%= project.(Customer(params[:id])) %></td>
+    24:         <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
+    25:         <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
+    26:         <td><%= link_to 'Delete', project,
+  
+app/views/projects/index.html.erb:23:in `block in _app_views_projects_index_html_erb___3867947305753876993_70099044498920'
+app/views/projects/index.html.erb:15:in `_app_views_projects_index_html_erb___3867947305753876993_70099044498920'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:36:05 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `call' for #<Class:0x007f826a8afb58>
+Did you mean?  caller
+               all):
+    20:         <td><%= project.startdate %></td>
+    21:         <td><%= project.enddate %></td>
+    22:         <td><%= project.receive %></td>
+    23:         <td><%= project.(Customer.(params[:id])) %></td>
+    24:         <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
+    25:         <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
+    26:         <td><%= link_to 'Delete', project,
+  
+app/views/projects/index.html.erb:23:in `block in _app_views_projects_index_html_erb___3867947305753876993_70099043222540'
+app/views/projects/index.html.erb:15:in `_app_views_projects_index_html_erb___3867947305753876993_70099043222540'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:36:23 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `call' for #<Project:0x007f826a89d278>
+Did you mean?  caller):
+    20:         <td><%= project.startdate %></td>
+    21:         <td><%= project.enddate %></td>
+    22:         <td><%= project.receive %></td>
+    23:         <td><%= project.(Customer.all) %></td>
+    24:         <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
+    25:         <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
+    26:         <td><%= link_to 'Delete', project,
+  
+app/views/projects/index.html.erb:23:in `block in _app_views_projects_index_html_erb___3867947305753876993_70099055081360'
+app/views/projects/index.html.erb:15:in `_app_views_projects_index_html_erb___3867947305753876993_70099055081360'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:37:47 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (1817.2ms)
+Completed 500 Internal Server Error in 1823ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `project' for #<#<Class:0x000000049b01a0>:0x007f8264bf7910>
+Did you mean?  project_url
+               @projects):
+    32:   <% end %>
+    33: 
+    34: </table>
+    35: <td><%= project.name %></td>
+    36: 
+    37: <p>
+    38:   <%= link_to new_project_path, class: "btn btn-default" do %>
+  
+app/views/projects/index.html.erb:35:in `_app_views_projects_index_html_erb___3867947305753876993_70099006391040'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:38:05 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 679ms (Views: 676.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/23/edit" for 127.0.0.1 at 2017-05-22 04:38:10 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (8.1ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 125ms (Views: 119.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/projects/23/edit" for 127.0.0.1 at 2017-05-22 04:38:21 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (9.7ms)
+  Rendered projects/edit.html.erb within layouts/application (11.3ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `delete' for :id:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= select(:project, :customer, Customer.all, :id, :name) %>
+    37:     </p>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___3435682753148403525_70099056500320'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___3435682753148403525_70099056500320'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb___2290812058824951576_70099057135440'
+Started GET "/projects/23/edit" for 127.0.0.1 at 2017-05-22 04:38:41 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (6.9ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 130ms (Views: 126.7ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/projects/23" for 127.0.0.1 at 2017-05-22 04:38:48 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vKqG4moJhuzFkHtOKGaqK+s4CZs06txignjkQXvYtaMJAgXUA+THuNd00fgJI7ZnTSvptMp6yaNaRG+6z7m/Qg==", "project"=>{"name"=>"Project", "description"=>"11", "status"=>"Done", "startdate"=>"05/30/2017", "enddate"=>"05/30/2017", "receive"=>"", "customer"=>"2"}, "commit"=>"Update Project", "id"=>"23"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+Unpermitted parameter: :customer
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+No template found for ProjectsController#update, rendering head :no_content
+Completed 204 No Content in 16ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/projects/23/edit" for 127.0.0.1 at 2017-05-22 04:39:42 -0700
+  [1m[35m (18.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (115.9ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (120.8ms)
+Completed 200 OK in 3220ms (Views: 3103.0ms | ActiveRecord: 60.7ms)
+
+
+Started PATCH "/projects/23" for 127.0.0.1 at 2017-05-22 04:39:53 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zf8yAsCZYAOFBF8napDkO1L/yBzA9JLjWxDzseqJc3N4V7E0qXQhV5fg9ZFL1fh39OwoMz5khyKDLHhKXuh5kg==", "project"=>{"name"=>"Project", "description"=>"11", "status"=>"Done", "startdate"=>"05/30/2017", "enddate"=>"05/30/2017", "receive"=>"", "customer"=>"4"}, "commit"=>"Update Project", "id"=>"23"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 7.6ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Customer(#34487000) expected, got "4" which is an instance of String(#8928840)):
+  
+app/controllers/projects_controller.rb:26:in `update'
+Started GET "/projects/23/edit" for 127.0.0.1 at 2017-05-22 04:41:22 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (1.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (142.1ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (144.1ms)
+Completed 200 OK in 397ms (Views: 367.2ms | ActiveRecord: 2.4ms)
+
+
+Started PATCH "/projects/23" for 127.0.0.1 at 2017-05-22 04:41:38 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9XuVHnHNYKej3aK8ueUtW0r9QAECh6yz6J7jR/9l3DWfW1iECp01oxr3DzTooj5yzgVL/qaC3MXnvB2q5ydkQ==", "project"=>{"name"=>"Project", "description"=>"11", "status"=>"Done", "startdate"=>"05/30/2017", "enddate"=>"05/30/2017", "receive"=>"", "customer"=>"4"}, "commit"=>"Update Project", "id"=>"23"}
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+Unpermitted parameter: :customer
+Completed 400 Bad Request in 5ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: customer):
+  
+app/controllers/projects_controller.rb:41:in `project_params'
+app/controllers/projects_controller.rb:26:in `update'
+Started GET "/customers/new" for 127.0.0.1 at 2017-05-22 04:43:25 -0700
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/_form.html.erb (2.2ms) [cache miss]
+  Rendered customers/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 140ms (Views: 120.2ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2017-05-22 04:43:28 -0700
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R1euh2AXCgfpQZD331CCwmaR0AHIbMVfJgnXYJ37r0FD/dcObXExmuJwCeCqUdKHEQzLoO9Yl6msdvhGF/c/cQ==", "customer"=>{"name"=>"avsasv"}, "commit"=>"Create Customer"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "customers" ("created_at", "updated_at", "name") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-05-22 11:43:28.123566"], ["updated_at", "2017-05-22 11:43:28.123566"], ["name", "avsasv"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/customers
+Completed 302 Found in 10ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 04:43:28 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 109ms (Views: 107.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/23/edit" for 127.0.0.1 at 2017-05-22 04:43:32 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (9.4ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 165ms (Views: 138.9ms | ActiveRecord: 8.2ms)
+
+
+Started PATCH "/projects/23" for 127.0.0.1 at 2017-05-22 04:43:44 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e8MUwsXDXaaK7dMey2QqUZqTCxAy0iEsbhQ9ZItRsufOa5f0rC4c8pgJeajqITYdPIDrP8xCNO22KLafPzC4Bg==", "project"=>{"name"=>"Project", "description"=>"11", "status"=>"Done", "startdate"=>"05/30/2017", "enddate"=>"05/30/2017", "receive"=>"", "customer"=>"5"}, "commit"=>"Update Project", "id"=>"23"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+Unpermitted parameter: :customer
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+No template found for ProjectsController#update, rendering head :no_content
+Completed 204 No Content in 17ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:43:47 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 113ms (Views: 104.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:45:18 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    20:         <td><%= project.startdate %></td>
+    21:         <td><%= project.enddate %></td>
+    22:         <td><%= project.receive %></td>
+    23:         <td><%= project.customer.name %></td>
+    24:         <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
+    25:         <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
+    26:         <td><%= link_to 'Delete', project,
+  
+app/views/projects/index.html.erb:23:in `block in _app_views_projects_index_html_erb___2695541204394681201_70276040636240'
+app/views/projects/index.html.erb:15:in `_app_views_projects_index_html_erb___2695541204394681201_70276040636240'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:45:38 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 155ms (Views: 153.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/23/edit" for 127.0.0.1 at 2017-05-22 04:45:53 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (1.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (13.2ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 153ms (Views: 146.3ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/projects/23" for 127.0.0.1 at 2017-05-22 04:45:57 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uH80wtY9+vqIUdhdjFbGrL/Avsq4t4Rjhx5IrvAwxuq1BoLDEHj5x6Nl9X/ktkxDE12LqDPpJd2ULWCkc3mbBA==", "project"=>{"name"=>"Project", "description"=>"11", "status"=>"Done", "startdate"=>"05/30/2017", "enddate"=>"05/30/2017", "receive"=>"05/29/2017", "customer"=>"5"}, "commit"=>"Update Project", "id"=>"23"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+Unpermitted parameter: :customer
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+No template found for ProjectsController#update, rendering head :no_content
+Completed 204 No Content in 25ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/projects/23/edit" for 127.0.0.1 at 2017-05-22 04:48:33 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (9.1ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 144ms (Views: 139.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 04:48:36 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 109ms (Views: 106.7ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5945696501651356170);[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (34.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5945696501651356170)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5945696501651356170);[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5945696501651356170)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5945696501651356170);[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5945696501651356170)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5945696501651356170);[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DropCustomersTable (20170522121858)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (127.2ms)[0m  [1m[35mDROP TABLE "customers"[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170522121858"]]
+  [1m[35m (25.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(5945696501651356170)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5945696501651356170);[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCustomers (20170522122025)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (129.0ms)[0m  [1m[35mCREATE TABLE "customers" ("id" bigserial primary key, "name" character varying, "project_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_65796eb624"
+FOREIGN KEY ("project_id")
+  REFERENCES "projects" ("id")
+)[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE  INDEX  "index_customers_on_project_id" ON "customers"  ("project_id")[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170522122025"]]
+  [1m[35m (10.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(5945696501651356170)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5945696501651356170);[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DropCustomersTable2 (20170522122425)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (24.3ms)[0m  [1m[35mDROP TABLE "customers"[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170522122425"]]
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5945696501651356170)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5945696501651356170);[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCustomers (20170522122957)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.7ms)[0m  [1m[35mCREATE TABLE "customers" ("id" bigserial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170522122957"]]
+  [1m[35m (11.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5945696501651356170)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5945696501651356170);[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DropProjectsTable (20170522123206)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.4ms)[0m  [1m[35mDROP TABLE "projects"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170522123206"]]
+  [1m[35m (22.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5945696501651356170)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5945696501651356170);[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(5945696501651356170)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5945696501651356170);[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateProjects (20170522123546)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (26.5ms)[0m  [1m[35mCREATE TABLE "projects" ("id" bigserial primary key, "name" character varying, "description" character varying, "status" character varying, "startdate" character varying, "enddate" character varying, "receive" character varying, "customer_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_47c768ed16"
+FOREIGN KEY ("customer_id")
+  REFERENCES "customers" ("id")
+)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE  INDEX  "index_projects_on_customer_id" ON "projects"  ("customer_id")[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170522123546"]]
+  [1m[35m (12.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5945696501651356170)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

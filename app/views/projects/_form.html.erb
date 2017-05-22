@@ -32,6 +32,10 @@
       <%= f.text_field :receive, data:{ provide:'datepicker' } %>
     </p>
 
+    <p>
+      <%= collection_select(:project, :customer, Customer.all, :id, :name) %>
+    </p>
+
      <p>
       <%= f.submit %>
     </p>

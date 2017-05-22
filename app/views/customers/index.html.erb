@@ -1,0 +1,28 @@
+<h3>Customers</h3>
+
+<table>
+  <tr>
+    <th>Customer</th>
+    <th colspan="3"></th>
+  </tr>
+
+  <% @customers.each do |customer| %>
+      <tr>
+        <td><%= customer.name %></td>
+        <td><%= link_to 'Open', customer_path(customer), class: "btn btn-default" %></td>
+        <td><%= link_to 'Edit', edit_customer_path(customer), class: "btn btn-default" %></td>
+        <td><%= link_to 'Delete', customer,
+                        method: :delete,
+                        data: { confirm: 'Are you sure?' },
+                        class: "btn btn-default" %>
+        </td>
+      </tr>
+  <% end %>
+</table>
+
+
+<p>
+  <%= link_to new_customer_path, class: "btn btn-default" do %>
+    <i class="glyphicon glyphicon-plus-sign"></i> Add Customer
+  <% end %>
+</p>
