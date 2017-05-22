@@ -11642,3 +11642,592 @@ FOREIGN KEY ("customer_id")
   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5945696501651356170)[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 05:38:25 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 573ms (Views: 559.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/projects/23/edit" for 127.0.0.1 at 2017-05-22 05:38:34 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+Completed 404 Not Found in 26ms (ActiveRecord: 7.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Project with 'id'=23):
+  
+app/controllers/projects_controller.rb:16:in `edit'
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 05:38:38 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 140ms (Views: 138.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 05:38:41 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 115ms (Views: 105.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2017-05-22 05:38:43 -0700
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/_form.html.erb (11.2ms) [cache miss]
+  Rendered customers/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 101ms (Views: 92.9ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2017-05-22 05:38:45 -0700
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wXkb4c+HV77t0puFwltgySSwO482o4av1YOBZLKPZdrF02JowuFsI+bjApK3WjCMUy0gLhGX1Flf/K5COIP16g==", "customer"=>{"name"=>"q"}, "commit"=>"Create Customer"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "customers" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "q"], ["created_at", "2017-05-22 12:38:45.261193"], ["updated_at", "2017-05-22 12:38:45.261193"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/customers
+Completed 302 Found in 13ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 05:38:45 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 125ms (Views: 123.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 05:38:49 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (12.7ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 141ms (Views: 123.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-22 05:39:03 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"otWQj0Uq83fpmp5Jk6k/PEkvCUzW71CE2PVc+IcTgjGeG/myN0yBiTAYFlBB+6Nvl40D8SfZ4tLurmDrGPRCRw==", "project"=>{"name"=>"1", "description"=>"1", "status"=>"Active", "startdate"=>"05/30/2017", "enddate"=>"05/31/2017", "receive"=>"06/01/2017", "customer"=>"1"}, "commit"=>"Create Project"}
+Unpermitted parameter: :customer
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 6ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 05:39:03 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 98ms (Views: 96.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 05:39:37 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 99ms (Views: 96.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers/1/edit" for 127.0.0.1 at 2017-05-22 05:39:41 -0700
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering customers/edit.html.erb within layouts/application
+  Rendered customers/_form.html.erb (2.1ms) [cache miss]
+  Rendered customers/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 145ms (Views: 140.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 05:39:42 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 98ms (Views: 94.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2017-05-22 05:39:44 -0700
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/_form.html.erb (2.0ms) [cache miss]
+  Rendered customers/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 102ms (Views: 100.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2017-05-22 05:39:46 -0700
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b+juXgA/f7hYTL5RhSbgtDhKuDvpBkQ9fNwyRpWBKitrQpfXDVlEJVN9J0bwJ7DxT9ejms4yFsv2ox1gH426Gw==", "customer"=>{"name"=>"2"}, "commit"=>"Create Customer"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "customers" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "2"], ["created_at", "2017-05-22 12:39:46.685095"], ["updated_at", "2017-05-22 12:39:46.685095"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/customers
+Completed 302 Found in 10ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 05:39:46 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 131ms (Views: 128.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 05:39:48 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 113ms (Views: 110.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 05:39:48 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 119ms (Views: 117.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 05:39:50 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (9.7ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 117ms (Views: 113.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-22 05:39:53 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dA2OzbQKSZOouCB62MVNncc8gGH2WhuYoYgmMvh911NIw+fwxmw7bXE6qGMKl9HOGZ6K3Adsqc6X0xohZ5oXJQ==", "project"=>{"name"=>"", "description"=>"", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receive"=>"", "customer"=>"2"}, "commit"=>"Create Project"}
+Unpermitted parameter: :customer
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 05:39:53 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 123ms (Views: 121.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 05:40:39 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 344ms (Views: 331.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 05:40:41 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (28.3ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 183ms (Views: 137.1ms | ActiveRecord: 18.6ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-22 05:40:42 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3l2mE7Bg9wYBMOIdF/DWY2MkDJP5hPK+XHD7q3gdSBjik88uwgaF+NiyagTFokowvYYGLgiyQOhqK8e45/qIbg==", "project"=>{"name"=>"", "description"=>"", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receive"=>"", "customer"=>"1"}, "commit"=>"Create Project"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Customer(#70050694538760) expected, got "1" which is an instance of String(#11771460)):
+  
+app/controllers/projects_controller.rb:20:in `create'
+Started POST "/projects" for 127.0.0.1 at 2017-05-22 05:41:05 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WserbxzGbyO+dZ6sAQuuRGiNxwFGTF3Dz9gTlyRIVYLvbyhZdSsud6yRNBogTrIIzp4nLrjcSAIX5JhskClfYw==", "project"=>{"name"=>"r", "description"=>"r", "status"=>"Waiting...", "startdate"=>"05/29/2017", "enddate"=>"05/30/2017", "receive"=>"05/31/2017", "customer"=>"2"}, "commit"=>"Create Project"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Customer(#70050694538760) expected, got "2" which is an instance of String(#11771460)):
+  
+app/controllers/projects_controller.rb:20:in `create'
+Started POST "/projects" for 127.0.0.1 at 2017-05-22 05:42:03 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WserbxzGbyO+dZ6sAQuuRGiNxwFGTF3Dz9gTlyRIVYLvbyhZdSsud6yRNBogTrIIzp4nLrjcSAIX5JhskClfYw==", "project"=>{"name"=>"r", "description"=>"r", "status"=>"Waiting...", "startdate"=>"05/29/2017", "enddate"=>"05/30/2017", "receive"=>"05/31/2017", "customer"=>"2"}, "commit"=>"Create Project"}
+Unpermitted parameter: :customer
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 40ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 05:42:03 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 130ms (Views: 128.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 05:42:04 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (14.8ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 140ms (Views: 135.7ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-22 05:42:15 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5mfq3k/iBbXWYuOovJ58TUdQWOIBBdX3eIB6pgPDb4raqYPjPYR3Sw/ga7FuzOAemfJSX/AzZ6FO20a1nCSv/A==", "project"=>{"name"=>"yukryuk", "description"=>"rfykutyuktyuk", "status"=>"Active", "startdate"=>"05/29/2017", "enddate"=>"05/30/2017", "receive"=>"05/31/2017", "customer"=>"2"}, "commit"=>"Create Project"}
+Unpermitted parameter: :customer
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 9ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 05:42:15 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 101ms (Views: 99.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 05:42:58 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 125ms (Views: 116.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 05:42:59 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (23.3ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 152ms (Views: 130.1ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-22 05:43:08 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cb/AMiw6QldHygzc8fLlM7oBcUg8ygl8/9WRDzZ0g/9NcakPXlwwqZ5IhMUjoHlgZKN79c38uyrJjq0cqZNDiQ==", "project"=>{"name"=>"wrehw", "description"=>"swrethwrh", "status"=>"Done", "startdate"=>"05/29/2017", "enddate"=>"05/30/2017", "receive"=>"05/31/2017", "customer"=>"1"}, "commit"=>"Create Project"}
+Unpermitted parameter: :customer
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 8ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 05:43:08 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 104ms (Views: 102.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 05:45:05 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (7.8ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 113ms (Views: 110.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 05:45:07 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 116ms (Views: 113.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 05:45:08 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 122ms (Views: 119.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2017-05-22 05:45:09 -0700
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/_form.html.erb (1.7ms) [cache miss]
+  Rendered customers/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 106ms (Views: 103.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customers" for 127.0.0.1 at 2017-05-22 05:45:12 -0700
+Processing by CustomersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wIfEb1H6lN3ul9m/Mno2qg/mkwYHVGLeXuz0HjAZPbPELb3mXJyvQOWmQKhHe2bveHuIpyBgMCjUk9s4uhWtgw==", "customer"=>{"name"=>"3"}, "commit"=>"Create Customer"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "customers" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "3"], ["created_at", "2017-05-22 12:45:12.592106"], ["updated_at", "2017-05-22 12:45:12.592106"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/customers
+Completed 302 Found in 13ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 05:45:12 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 117ms (Views: 115.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/customers/1" for 127.0.0.1 at 2017-05-22 05:45:14 -0700
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering customers/show.html.erb within layouts/application
+  Rendered customers/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 277ms (Views: 269.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 05:45:15 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 109ms (Views: 108.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/1/edit" for 127.0.0.1 at 2017-05-22 05:45:16 -0700
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering customers/edit.html.erb within layouts/application
+  Rendered customers/_form.html.erb (2.4ms) [cache miss]
+  Rendered customers/edit.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 128ms (Views: 125.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 05:45:17 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 116ms (Views: 114.7ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/customers/1" for 127.0.0.1 at 2017-05-22 05:45:19 -0700
+Processing by CustomersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cUPHIf6+1UJ05daUUvvif7uFUT5gFkYiEGUX4m5fmGrE60QXl1OUFmYBfCJzvv4zHZaxEZ6GU+PIWZwZ2j6Siw==", "id"=>"1"}
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/customers
+Completed 302 Found in 7ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 05:45:19 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 137ms (Views: 134.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 05:45:24 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (15.0ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 168ms (Views: 165.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 05:45:25 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 98ms (Views: 97.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 05:45:33 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (5.0ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 110ms (Views: 108.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 05:46:13 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (10.7ms)
+  Rendered projects/new.html.erb within layouts/application (11.8ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for :name:Symbol):
+    33:     </p>
+    34: 
+    35:     <p>
+    36:       <%= f.collection_select(:project, :customer, Customer.all, :id, :name) %>
+    37:     </p>
+    38: 
+    39:      <p>
+  
+app/views/projects/_form.html.erb:36:in `block in _app_views_projects__form_html_erb___1867042439990655036_70050698819940'
+app/views/projects/_form.html.erb:1:in `_app_views_projects__form_html_erb___1867042439990655036_70050698819940'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb__4081193761166699148_70050699683600'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 05:46:28 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (12.8ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 152ms (Views: 150.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-22 05:46:31 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TL82j2vZEbtVi5YSUDtCYS95MRrfVE9NSbIj1RmhkI75F7W5AjRQ70dvPKRxfl4tiWrRNSHEWoyRjqgurcCabw==", "project"=>{"name"=>"", "description"=>"", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receive"=>"", "customer"=>"3"}, "commit"=>"Create Project"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Customer(#70050697933140) expected, got "3" which is an instance of String(#11771460)):
+  
+app/controllers/projects_controller.rb:20:in `create'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 05:46:58 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (7.4ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 124ms (Views: 121.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-22 05:47:07 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vRH3i3y6uIrL6P6wzrCVP9PM+oSogAxjYgsZttxyxvwIuXS9FVf53tkMVAbv9Ylzdd8aq1YQGaK6N5JNaBPMHQ==", "project"=>{"name"=>"q", "description"=>"q", "status"=>"Waiting...", "startdate"=>"05/29/2017", "enddate"=>"05/30/2017", "receive"=>"05/31/2017", "customer_id"=>"2"}, "commit"=>"Create Project"}
+Unpermitted parameter: :customer_id
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 11ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 05:47:07 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 107ms (Views: 105.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 05:47:37 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  Rendered projects/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 256ms (Views: 249.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 05:47:38 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (16.0ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 144ms (Views: 105.3ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-22 05:47:46 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KWUcIt0sjpYDykiDjO8txzweDsPc5ru/d5c+xnBe+PsVq3Ufr0r8aNpIwJpevbGU4rwEfi3QCelBzALV77k4jQ==", "project"=>{"name"=>"erg", "description"=>"eargheswg", "status"=>"Waiting...", "startdate"=>"05/24/2017", "enddate"=>"05/18/2017", "receive"=>"05/11/2017", "customer_id"=>"2"}, "commit"=>"Create Project"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "status", "startdate", "enddate", "receive", "customer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "erg"], ["description", "eargheswg"], ["status", "Waiting..."], ["startdate", "05/24/2017"], ["enddate", "05/18/2017"], ["receive", "05/11/2017"], ["customer_id", 2], ["created_at", "2017-05-22 12:47:46.287904"], ["updated_at", "2017-05-22 12:47:46.287904"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 60ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 05:47:46 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 111ms (Views: 109.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2017-05-22 05:48:27 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (7.6ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 136ms (Views: 126.7ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/projects/1" for 127.0.0.1 at 2017-05-22 05:48:30 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d9LGlbiF1Id60mTr9+xCUIfss0h5yau4PqA95ubsPvBoLLN27ZgzZCe1zZD+l54g1t9GgScmBkZuTDoF8oJEJQ==", "project"=>{"name"=>"erg", "description"=>"eargheswg", "status"=>"Waiting...", "startdate"=>"05/24/2017", "enddate"=>"05/18/2017", "receive"=>"05/11/2017", "customer_id"=>"3"}, "commit"=>"Update Project", "id"=>"1"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "projects" SET "customer_id" = $1, "updated_at" = $2 WHERE "projects"."id" = $3[0m  [["customer_id", 3], ["updated_at", "2017-05-22 12:48:30.252447"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 14ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 05:48:30 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 143ms (Views: 139.7ms | ActiveRecord: 0.8ms)
+
+
