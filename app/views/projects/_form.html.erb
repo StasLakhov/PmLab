@@ -36,8 +36,8 @@
       <%= collection_select(:project, :customer_id, Customer.all, :id, :name) %>
     </p>
 
-     <p>
-      <%= f.submit %>
+    <p>
+      <%= f.submit :class => "btn btn-default" %>
     </p>
 
     <p>

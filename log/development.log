@@ -12384,3 +12384,2349 @@ Processing by ProjectsController#index as HTML
 Completed 200 OK in 108ms (Views: 106.3ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/projects/1/edit" for 127.0.0.1 at 2017-05-22 05:54:34 -0700
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (35.3ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (36.6ms)
+Completed 200 OK in 565ms (Views: 532.1ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 05:54:36 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (45.1ms)
+Completed 200 OK in 184ms (Views: 175.7ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2017-05-22 05:54:38 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (2.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (12.2ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 154ms (Views: 141.9ms | ActiveRecord: 4.0ms)
+
+
+Started PATCH "/projects/1" for 127.0.0.1 at 2017-05-22 05:54:42 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TTk7glwacqQhY8gPCHfB9a8n8t1QYsUkpIki7+QU1X9Sx05hCQeVR3wEYXQBDB2F/hQHFA6NaNr0ZSUM8Hqvqg==", "project"=>{"name"=>"erg", "description"=>"eargheswg", "status"=>"Waiting...", "startdate"=>"05/24/2017", "enddate"=>"05/18/2017", "receive"=>"05/11/2017", "customer_id"=>"4"}, "commit"=>"Update Project", "id"=>"1"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "projects" SET "customer_id" = $1, "updated_at" = $2 WHERE "projects"."id" = $3[0m  [["customer_id", 4], ["updated_at", "2017-05-22 12:54:42.210288"], ["id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 12ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 05:54:42 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 128ms (Views: 125.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2017-05-22 06:08:45 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 122ms (Views: 116.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 06:08:47 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 128ms (Views: 124.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 06:11:36 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 120ms (Views: 118.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 06:11:40 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/stas/.rvm/gems/ruby-2.4.0@pmlab/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/stas/.rvm/gems/ruby-2.4.0@pmlab/gems/railties-5.1.1/lib/rails/templates/rails/welcome/index.html.erb (1.4ms)
+Completed 200 OK in 18ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 06:11:44 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 201ms (Views: 197.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 06:11:45 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 134ms (Views: 129.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 06:11:58 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 148ms (Views: 146.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/customers/4/edit" for 127.0.0.1 at 2017-05-22 07:27:02 -0700
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCustomer Load (22.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering customers/edit.html.erb within layouts/application
+  Rendered customers/_form.html.erb (65.0ms) [cache miss]
+  Rendered customers/edit.html.erb within layouts/application (78.5ms)
+Completed 200 OK in 1754ms (Views: 1463.3ms | ActiveRecord: 22.0ms)
+
+
+Started PATCH "/customers/4" for 127.0.0.1 at 2017-05-22 07:27:09 -0700
+Processing by CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0PCp/CJlnI2DweUkRsFNuSpU0GwBFCcIvrIEdTKohGEHzoaePivaxq8yG2SgK4Nl/UUlQpSP48KBPBeX0b577w==", "customer"=>{"name"=>"2x2"}, "commit"=>"Update Customer", "id"=>"4"}
+  [1m[36mCustomer Load (1.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (81.8ms)[0m  [1m[33mUPDATE "customers" SET "name" = $1, "updated_at" = $2 WHERE "customers"."id" = $3[0m  [["name", "2x2"], ["updated_at", "2017-05-22 14:27:09.105853"], ["id", 4]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/customers
+Completed 302 Found in 134ms (ActiveRecord: 85.4ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2017-05-22 07:27:09 -0700
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 274ms (Views: 271.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 07:27:12 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 290ms (Views: 285.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 07:27:55 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (11.1ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 234ms (Views: 231.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-22 07:27:57 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P+hBuLXd1ZCPMQzOhsAojCsP/x1sMPo6xMlACTqjccgDJiiFx7unblazhNdUkrTf9a31oJ0GSGzyknwapUSxvg==", "project"=>{"name"=>"", "description"=>"", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receive"=>"", "customer_id"=>"2"}, "commit"=>"Create Project"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (23.6ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "status", "startdate", "enddate", "receive", "customer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", ""], ["description", ""], ["status", "Waiting..."], ["startdate", ""], ["enddate", ""], ["receive", ""], ["customer_id", 2], ["created_at", "2017-05-22 14:27:57.547016"], ["updated_at", "2017-05-22 14:27:57.547016"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 46ms (ActiveRecord: 26.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 07:27:57 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 516ms (Views: 513.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-22 07:28:00 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (49.5ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (51.6ms)
+Completed 200 OK in 296ms (Views: 292.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-22 07:28:03 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zCOTFaL7vofT+Peft/5o9T56nDRzHMyZIrBxUr1kx6zw7foo0J3MeQp6f4ZlrPSm4NiWiYIqfs8U601BIoMH2g==", "project"=>{"name"=>"", "description"=>"", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receive"=>"", "customer_id"=>"2"}, "commit"=>"Create Project"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (12.7ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "status", "startdate", "enddate", "receive", "customer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", ""], ["description", ""], ["status", "Waiting..."], ["startdate", ""], ["enddate", ""], ["receive", ""], ["customer_id", 2], ["created_at", "2017-05-22 14:28:03.141273"], ["updated_at", "2017-05-22 14:28:03.141273"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 25ms (ActiveRecord: 15.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-22 07:28:03 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 150ms (Views: 147.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 00:41:03 -0700
+  [1m[35m (21.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (76.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (16.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (219.3ms)
+Completed 200 OK in 3161ms (Views: 2957.6ms | ActiveRecord: 150.6ms)
+
+
+Started GET "/projects/3/edit" for 127.0.0.1 at 2017-05-23 00:41:15 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (86.4ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (90.9ms)
+Completed 200 OK in 220ms (Views: 188.8ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 00:41:18 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (1.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 107ms (Views: 103.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/projects/3/edit" for 127.0.0.1 at 2017-05-23 00:47:37 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (3.1ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (7.4ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 120ms (Views: 107.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 00:47:40 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 115ms (Views: 109.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-23 00:58:14 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (12.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (230.4ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (264.8ms)
+Completed 200 OK in 1813ms (Views: 1628.8ms | ActiveRecord: 12.3ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-23 00:58:28 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7AcV4ESozCv83xddvQqjKpPyCR+gDI7zQit7sWD3MMEF1NPZFKZM27KL3k4E2QRvBy/ozXMQV9jBrl1JLmSeXA==", "project"=>{"name"=>"", "description"=>"", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receive"=>"", "customer_id"=>"2"}, "commit"=>"Create Project"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Load (5.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (121.4ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "status", "startdate", "enddate", "receive", "customer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", ""], ["description", ""], ["status", "Waiting..."], ["startdate", ""], ["enddate", ""], ["receive", ""], ["customer_id", 2], ["created_at", "2017-05-23 07:58:28.431946"], ["updated_at", "2017-05-23 07:58:28.431946"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 143ms (ActiveRecord: 129.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 00:58:28 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 113ms (Views: 103.9ms | ActiveRecord: 2.6ms)
+
+
+Started DELETE "/projects/4" for 127.0.0.1 at 2017-05-23 01:17:45 -0700
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"403AoIHRExVD7dYcuaSwubwk/oe6tV40h6bq1g+NFpFhR/RmEABrFtP8RR0HBjql0yJYJvm+UtxhFZ+jq1pBMQ==", "id"=>"4"}
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 125ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:17:45 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 187ms (Views: 184.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-23 01:18:12 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (13.1ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 113ms (Views: 110.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:18:19 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 105ms (Views: 102.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:19:11 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 100ms (Views: 97.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:19:59 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 108ms (Views: 105.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:20:32 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 106ms (Views: 102.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:20:54 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 109ms (Views: 105.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:21:13 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 117ms (Views: 115.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:21:29 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 113ms (Views: 110.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:21:31 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 91ms (Views: 88.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:21:54 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 108ms (Views: 105.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:22:19 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 111ms (Views: 106.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-23 01:22:34 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (12.9ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 123ms (Views: 120.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:22:35 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (1.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 112ms (Views: 107.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2017-05-23 01:22:36 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 112ms (Views: 98.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:22:38 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 104ms (Views: 99.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:24:11 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 111ms (Views: 106.8ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2017-05-23 01:24:12 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (5.8ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 116ms (Views: 102.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2017-05-23 01:24:14 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (155.4ms)
+Completed 500 Internal Server Error in 161ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    14:   </tr>
+    15:   </thead>
+    16: 
+    17:   <% @projects.each do |project| %>
+    18:       <tr>
+    19:         <td><%= project.name %></td>
+    20:         <td><%= project.description %></td>
+  
+app/views/projects/show.html.erb:17:in `_app_views_projects_show_html_erb__9583126827778771_45912640'
+Started GET "/projects/1" for 127.0.0.1 at 2017-05-23 01:24:47 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (270.3ms)
+Completed 500 Internal Server Error in 276ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `project' for #<#<Class:0x000000056bb8e0>:0x007f07dec46818>
+Did you mean?  @project):
+    16: 
+    17: 
+    18:       <tr>
+    19:         <td><%= project.name %></td>
+    20:         <td><%= project.description %></td>
+    21:         <td><%= project.status %></td>
+    22:         <td><%= project.startdate %></td>
+  
+app/views/projects/show.html.erb:19:in `_app_views_projects_show_html_erb__9583126827778771_69835889457460'
+Started GET "/projects/1" for 127.0.0.1 at 2017-05-23 01:25:04 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/home/stas/PmLab/app/views/projects/show.html.erb:38: syntax error, unexpected keyword_ensure, expecting keyword_end
+          ensure
+                ^):
+  
+app/views/projects/show.html.erb:38: syntax error, unexpected keyword_ensure, expecting keyword_end
+Started GET "/projects/1" for 127.0.0.1 at 2017-05-23 01:25:30 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Project:0x007f07de34e738>):
+    14:   </tr>
+    15:   </thead>
+    16: 
+    17:   <% @project.each do |project| %>
+    18:       <tr>
+    19:         <td><%= project.name %></td>
+    20:         <td><%= project.description %></td>
+  
+app/views/projects/show.html.erb:17:in `_app_views_projects_show_html_erb__9583126827778771_69835884751100'
+Started GET "/projects/1" for 127.0.0.1 at 2017-05-23 01:25:47 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  Rendered projects/show.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/home/stas/PmLab/app/views/projects/show.html.erb:17: syntax error, unexpected keyword_do, expecting keyword_end
+'.freeze;   @project do |project| 
+                       ^
+/home/stas/PmLab/app/views/projects/show.html.erb:38: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/projects/show.html.erb:17: syntax error, unexpected keyword_do, expecting keyword_end
+app/views/projects/show.html.erb:38: syntax error, unexpected keyword_ensure, expecting end-of-input
+Started GET "/projects/1" for 127.0.0.1 at 2017-05-23 01:28:47 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (270.4ms)
+Completed 500 Internal Server Error in 276ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `project' for #<#<Class:0x000000056bb8e0>:0x007f07f00862f0>
+Did you mean?  @project):
+    24:       <td><%= @project.receive %></td>
+    25:       <td><%= @project.customer.name %></td>
+    26:       <td><%= link_to 'Edit', edit_project_path, class: "btn btn-default" %></td>
+    27:       <td><%= link_to 'Delete', project,
+    28:                       method: :delete,
+    29:                       data: { confirm: 'Are you sure?' },
+    30:                       class: "btn btn-default" %>
+  
+app/views/projects/show.html.erb:27:in `_app_views_projects_show_html_erb__9583126827778771_69836034291380'
+Started GET "/projects/1" for 127.0.0.1 at 2017-05-23 01:28:57 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 113ms (Views: 108.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:29:01 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 91ms (Views: 88.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2017-05-23 01:29:04 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 116ms (Views: 109.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2017-05-23 01:29:16 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 102ms (Views: 96.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:29:22 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 114ms (Views: 108.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:29:41 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 109ms (Views: 106.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2017-05-23 01:29:43 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 128ms (Views: 119.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:30:04 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 106ms (Views: 102.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/projects/3/edit" for 127.0.0.1 at 2017-05-23 01:30:06 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (8.9ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 116ms (Views: 110.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:30:08 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 96ms (Views: 93.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/3/edit" for 127.0.0.1 at 2017-05-23 01:30:09 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (12.1ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 126ms (Views: 120.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:30:10 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (6.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 100ms (Views: 91.4ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/projects/3" for 127.0.0.1 at 2017-05-23 01:30:12 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 114ms (Views: 110.4ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/projects/3" for 127.0.0.1 at 2017-05-23 01:30:21 -0700
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yKjNQz91ubwFzaJ7AcA2d4PIEAxKOMKkf1cZF/KDqX5KovmFrqTBv5XcMXq/Yrxr7M62rQkzzkyZ5GxiVlT+3g==", "id"=>"3"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (15.3ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 19ms (ActiveRecord: 16.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:30:21 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 95ms (Views: 92.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-23 01:30:26 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (7.0ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 111ms (Views: 108.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-23 01:30:27 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/CCvM1uQeYEt/+zpLG1Bw8+KTFwwJI2TG5Z5GtGcvsIV82kKC575cWOrJfqVvuaGW1etjuM4VLiYE1/inw8QXw==", "project"=>{"name"=>"", "description"=>"", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receive"=>"", "customer_id"=>"2"}, "commit"=>"Create Project"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "status", "startdate", "enddate", "receive", "customer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", ""], ["description", ""], ["status", "Waiting..."], ["startdate", ""], ["enddate", ""], ["receive", ""], ["customer_id", 2], ["created_at", "2017-05-23 08:30:27.867488"], ["updated_at", "2017-05-23 08:30:27.867488"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 9ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:30:27 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 95ms (Views: 93.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2017-05-23 01:30:44 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 117ms (Views: 111.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:30:45 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (1.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 111ms (Views: 105.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2017-05-23 01:30:46 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (9.3ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 108ms (Views: 102.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:30:48 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 107ms (Views: 104.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2017-05-23 01:30:56 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (11.5ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 109ms (Views: 103.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:31:03 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (2.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (3.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 121ms (Views: 112.3ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:33:48 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 110ms (Views: 106.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:34:28 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 117ms (Views: 114.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:38:09 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (3.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 171ms (Views: 163.8ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-23 01:38:11 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (208.3ms)
+  Rendered projects/new.html.erb within layouts/application (209.1ms)
+Completed 500 Internal Server Error in 211ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `project' for #<#<Class:0x000000056bb8e0>:0x00000005793f10>
+Did you mean?  @project):
+    28:           <td><%= f.text_field :receive, data:{ provide:'datepicker' } %></td>
+    29:           <td><%= collection_select(:project, :customer_id, Customer.all, :id, :name) %></td>
+    30:           <%= f.submit %>
+    31:           <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
+    32:           <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
+    33:           <td><%= link_to 'Delete', project,
+    34:                           method: :delete,
+  
+app/views/projects/_form.html.erb:31:in `block in _app_views_projects__form_html_erb__121452100170616832_45467040'
+app/views/projects/_form.html.erb:18:in `_app_views_projects__form_html_erb__121452100170616832_45467040'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb__1451300677324844118_46008080'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-23 01:38:33 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  Rendered projects/_form.html.erb (1.7ms)
+  Rendered projects/new.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/stas/PmLab/app/views/projects/_form.html.erb:31: syntax error, unexpected '(', expecting ')'
+link_to 'Open', @project_path(project), class: "btn btn-defa
+                              ^
+/home/stas/PmLab/app/views/projects/_form.html.erb:31: syntax error, unexpected tLABEL
+@project_path(project), class: "btn btn-default" );@output_b
+                              ^
+/home/stas/PmLab/app/views/projects/_form.html.erb:31: syntax error, unexpected ')', expecting keyword_end
+t), class: "btn btn-default" );@output_buffer.safe_append='<
+                              ^
+/home/stas/PmLab/app/views/projects/_form.html.erb:47: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+                ^):
+  
+app/views/projects/_form.html.erb:31: syntax error, unexpected '(', expecting ')'
+app/views/projects/_form.html.erb:31: syntax error, unexpected tLABEL
+app/views/projects/_form.html.erb:31: syntax error, unexpected ')', expecting keyword_end
+app/views/projects/_form.html.erb:47: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb__1451300677324844118_69836034271080'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-23 01:38:50 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (330.6ms)
+  Rendered projects/new.html.erb within layouts/application (332.4ms)
+Completed 500 Internal Server Error in 337ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `project' for #<#<Class:0x000000056bb8e0>:0x007f07de908930>
+Did you mean?  @project):
+    28:           <td><%= f.text_field :receive, data:{ provide:'datepicker' } %></td>
+    29:           <td><%= collection_select(:project, :customer_id, Customer.all, :id, :name) %></td>
+    30:           <%= f.submit %>
+    31:           <td><%= link_to 'Open', project_path(project), class: "btn btn-default" %></td>
+    32:           <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
+    33:           <td><%= link_to 'Delete', @project,
+    34:                           method: :delete,
+  
+app/views/projects/_form.html.erb:31:in `block in _app_views_projects__form_html_erb__121452100170616832_69835887706200'
+app/views/projects/_form.html.erb:18:in `_app_views_projects__form_html_erb__121452100170616832_69835887706200'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb__1451300677324844118_69835887758240'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-23 01:39:04 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (4.4ms)
+  Rendered projects/new.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"projects", :id=>nil}, missing required keys: [:id]):
+    28:           <td><%= f.text_field :receive, data:{ provide:'datepicker' } %></td>
+    29:           <td><%= collection_select(:project, :customer_id, Customer.all, :id, :name) %></td>
+    30:           <%= f.submit %>
+    31:           <td><%= link_to 'Open', project_path(@project), class: "btn btn-default" %></td>
+    32:           <td><%= link_to 'Edit', edit_project_path(@project), class: "btn btn-default" %></td>
+    33:           <td><%= link_to 'Delete', @project,
+    34:                           method: :delete,
+  
+app/views/projects/_form.html.erb:31:in `block in _app_views_projects__form_html_erb__121452100170616832_69835882528160'
+app/views/projects/_form.html.erb:18:in `_app_views_projects__form_html_erb__121452100170616832_69835882528160'
+app/views/projects/new.html.erb:2:in `_app_views_projects_new_html_erb__1451300677324844118_69835882621800'
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-23 01:39:33 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (3.9ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 110ms (Views: 108.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:40:51 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 111ms (Views: 108.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-23 01:40:53 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (7.8ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 112ms (Views: 108.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:41:03 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (4.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 125ms (Views: 117.6ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/projects/5/edit" for 127.0.0.1 at 2017-05-23 01:41:04 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (5.3ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 103ms (Views: 96.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:41:06 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 108ms (Views: 104.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2017-05-23 01:41:07 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (6.1ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 103ms (Views: 98.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2017-05-23 01:43:57 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (6.5ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 118ms (Views: 115.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2017-05-23 01:44:21 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (6.3ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 151ms (Views: 147.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2017-05-23 01:44:36 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (3.9ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 98ms (Views: 85.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2017-05-23 01:44:41 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (1.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (7.4ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 114ms (Views: 109.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2017-05-23 01:47:19 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (237.6ms)
+  Rendered projects/edit.html.erb within layouts/application (238.9ms)
+Completed 500 Internal Server Error in 243ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x000000056bb8e0>:0x007f07f06d4828>):
+    34: </table>
+    35: 
+    36: <p>
+    37:   <%= f.submit %>
+    38:   <%= link_to 'Back', projects_path, class: "btn btn-default" %>
+    39: </p>
+  
+app/views/projects/_form.html.erb:37:in `_app_views_projects__form_html_erb__121452100170616832_69836037554520'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb__656510761472182448_69836037597460'
+Started GET "/projects/1/edit" for 127.0.0.1 at 2017-05-23 01:47:41 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (221.5ms)
+  Rendered projects/edit.html.erb within layouts/application (222.5ms)
+Completed 500 Internal Server Error in 227ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<#<Class:0x000000056bb8e0>:0x007f07dda6f888>):
+    32:     <% end %>
+    33:   </tbody>
+    34: </table>
+    35: <%= f.submit %>
+    36: <p>
+    37: 
+    38:   <%= link_to 'Back', projects_path, class: "btn btn-default" %>
+  
+app/views/projects/_form.html.erb:35:in `_app_views_projects__form_html_erb__121452100170616832_69835880014280'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb__656510761472182448_69835880123060'
+Started GET "/projects/1/edit" for 127.0.0.1 at 2017-05-23 01:48:00 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (4.7ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 136ms (Views: 132.0ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/projects/1" for 127.0.0.1 at 2017-05-23 01:48:03 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"commit"=>"Update Project", "utf8"=>"✓", "authenticity_token"=>"IFZnrvnHeICLsnGBoS1lNC1kdhT3lwXDbBWVpsIdRfaSl3zw501JtywLv4HhZMcBPqCUiZpSUQ0B1ez3SjIKIw==", "project"=>{"name"=>"erg", "description"=>"eargheswg", "status"=>"Waiting...", "startdate"=>"05/24/2017", "enddate"=>"05/18/2017", "receive"=>"05/11/2017", "customer_id"=>"4"}, "id"=>"1"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 10ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:48:03 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 106ms (Views: 102.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/projects/5/edit" for 127.0.0.1 at 2017-05-23 01:48:05 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (4.6ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 101ms (Views: 97.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:48:16 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (2.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 109ms (Views: 103.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/projects/5/edit" for 127.0.0.1 at 2017-05-23 01:48:26 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (6.4ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 107ms (Views: 95.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/projects/5/edit" for 127.0.0.1 at 2017-05-23 01:48:44 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (0.8ms)
+  Rendered projects/edit.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/home/stas/PmLab/app/views/projects/_form.html.erb:33: syntax error, unexpected tLABEL, expecting '='
+ffer.append=( f.submit, class: "btn btn-default" );@output_b
+                              ^):
+  
+app/views/projects/_form.html.erb:33: syntax error, unexpected tLABEL, expecting '='
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb__656510761472182448_69835888372160'
+Started GET "/projects/5/edit" for 127.0.0.1 at 2017-05-23 01:49:12 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (1.3ms)
+  Rendered projects/edit.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/home/stas/PmLab/app/views/projects/_form.html.erb:33: syntax error, unexpected '='
+fer.append=( f.submit, class = btn btn-default );@output_buf
+                              ^):
+  
+app/views/projects/_form.html.erb:33: syntax error, unexpected '='
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb__656510761472182448_69836036460580'
+Started GET "/projects/5/edit" for 127.0.0.1 at 2017-05-23 01:49:39 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  Rendered projects/_form.html.erb (1.2ms)
+  Rendered projects/edit.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/home/stas/PmLab/app/views/projects/_form.html.erb:33: syntax error, unexpected tLABEL, expecting '='
+ffer.append=( f.submit, class: btn btn-default );@output_buf
+                              ^):
+  
+app/views/projects/_form.html.erb:33: syntax error, unexpected tLABEL, expecting '='
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb__656510761472182448_69835878483840'
+Started GET "/projects/5/edit" for 127.0.0.1 at 2017-05-23 01:50:02 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (4.6ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 98ms (Views: 95.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/5/edit" for 127.0.0.1 at 2017-05-23 01:51:08 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (6.8ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 113ms (Views: 107.8ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/projects/5" for 127.0.0.1 at 2017-05-23 01:51:11 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"button"=>"", "utf8"=>"✓", "authenticity_token"=>"k+ZoP8wiCcxAMyyYcCCebtMEgMhYyRC1Eck5+yEeNkvzzR+I8Kem5ofwrR326jPhkSFz74pN1GOZxj+Qh32//w==", "project"=>{"name"=>"", "description"=>"", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receive"=>"", "customer_id"=>"2"}, "id"=>"5"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:51:11 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 98ms (Views: 96.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2017-05-23 01:51:13 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (3.0ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 87ms (Views: 84.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:51:24 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 109ms (Views: 106.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2017-05-23 01:51:26 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (7.4ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 110ms (Views: 104.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:51:32 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 101ms (Views: 97.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/projects/5/edit" for 127.0.0.1 at 2017-05-23 01:51:40 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (6.0ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 99ms (Views: 95.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects/5/edit" for 127.0.0.1 at 2017-05-23 01:51:58 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (1.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (7.2ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 119ms (Views: 112.5ms | ActiveRecord: 2.4ms)
+
+
+Started PATCH "/projects/5" for 127.0.0.1 at 2017-05-23 01:52:00 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"button"=>"", "utf8"=>"✓", "authenticity_token"=>"oD3QKHX8NDsX4QMLdsF14Ahe1tsPK2IujJgNBcgfSyjAFqefSXmbEdAigo7wC9hvSnsl/N2vpvgElwtubnzCnA==", "project"=>{"name"=>"", "description"=>"", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receive"=>"", "customer_id"=>"2"}, "id"=>"5"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 6ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:52:00 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 97ms (Views: 95.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2017-05-23 01:52:02 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (4.3ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 94ms (Views: 91.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:52:07 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (3.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 122ms (Views: 114.7ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/projects/5/edit" for 127.0.0.1 at 2017-05-23 01:52:08 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (6.9ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 101ms (Views: 96.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:52:16 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 117ms (Views: 114.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2017-05-23 01:52:21 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (8.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (5.6ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 115ms (Views: 94.3ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2017-05-23 01:52:51 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (11.0ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 96ms (Views: 92.5ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/projects/1" for 127.0.0.1 at 2017-05-23 01:52:52 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"commit"=>"Update Project", "utf8"=>"✓", "authenticity_token"=>"bGNEWVq/m6aVZGNVtNK7SK/eomJjnR8T/N57uQclCsXeol8HRDWqkTLdrVX0mxl9vBpA/w5YS92RHgLojwpFEA==", "project"=>{"name"=>"erg", "description"=>"eargheswg", "status"=>"Waiting...", "startdate"=>"05/24/2017", "enddate"=>"05/18/2017", "receive"=>"05/11/2017", "customer_id"=>"4"}, "id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:52:52 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 92ms (Views: 90.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2017-05-23 01:52:54 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (4.4ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 87ms (Views: 84.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2017-05-23 01:53:11 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (3.8ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 105ms (Views: 99.9ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/projects/1" for 127.0.0.1 at 2017-05-23 01:53:14 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"commit"=>"Update Project", "utf8"=>"✓", "authenticity_token"=>"l6IJoRirjw8VlXCjzTWcjUTFCqilgCJwyLKYjh9DWGklYxL/BiG+OLIsvqONfD64VwHoNchFdr6lcuHfl2wXvA==", "project"=>{"name"=>"erg", "description"=>"eargheswg", "status"=>"Waiting...", "startdate"=>"05/24/2017", "enddate"=>"05/18/2017", "receive"=>"05/11/2017", "customer_id"=>"4"}, "id"=>"1"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 7ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:53:14 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 100ms (Views: 98.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/5/edit" for 127.0.0.1 at 2017-05-23 01:53:16 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (9.2ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 106ms (Views: 101.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:53:27 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 121ms (Views: 116.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/projects/5/edit" for 127.0.0.1 at 2017-05-23 01:53:29 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (6.3ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 97ms (Views: 94.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:53:30 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 193ms (Views: 191.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/5" for 127.0.0.1 at 2017-05-23 01:53:31 -0700
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering projects/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 108ms (Views: 105.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/5/edit" for 127.0.0.1 at 2017-05-23 01:53:33 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (5.2ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 95ms (Views: 92.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/projects/5/edit" for 127.0.0.1 at 2017-05-23 01:54:31 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (2.9ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 96ms (Views: 93.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:54:34 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 118ms (Views: 115.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/projects/5/edit" for 127.0.0.1 at 2017-05-23 01:54:35 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (3.7ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 95ms (Views: 91.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:54:38 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 108ms (Views: 105.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:55:04 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 125ms (Views: 122.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects/5/edit" for 127.0.0.1 at 2017-05-23 01:55:05 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (271.9ms)
+  Rendered projects/edit.html.erb within layouts/application (272.8ms)
+Completed 500 Internal Server Error in 276ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `submit' for #<#<Class:0x000000056bb8e0>:0x007f07f01d1510>
+Did you mean?  submit_tag):
+    30:           <td><%= collection_select(:project, :customer_id, Customer.all, :id, :name) %></td>
+    31:         </tr>
+    32: 
+    33:       <%= submit %>
+    34:     <% end %>
+    35:   </tbody>
+    36: </table>
+  
+app/views/projects/_form.html.erb:33:in `block in _app_views_projects__form_html_erb__121452100170616832_69836034851940'
+app/views/projects/_form.html.erb:18:in `_app_views_projects__form_html_erb__121452100170616832_69836034851940'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb__656510761472182448_69836034969480'
+Started GET "/projects/5/edit" for 127.0.0.1 at 2017-05-23 01:55:15 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (4.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (7.7ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 173ms (Views: 163.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:55:17 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 126ms (Views: 123.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/2/edit" for 127.0.0.1 at 2017-05-23 01:55:18 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProject Load (0.9ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (8.2ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 131ms (Views: 124.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:55:24 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 120ms (Views: 116.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-23 01:55:24 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (21.0ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 129ms (Views: 122.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:55:28 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (1.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 115ms (Views: 109.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-23 01:55:29 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (6.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (10.3ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 99ms (Views: 91.0ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-23 01:55:59 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (3.4ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 93ms (Views: 90.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-23 01:56:02 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"commit"=>"Create Project", "utf8"=>"✓", "authenticity_token"=>"9e1tREsVypbsJZjIR9WN3sbM1Qc+ld4dP234TpHDTX0cPqt9GxtKZqJxUdv+BiqbUhE01e2JBza86N6231Dj4A==", "project"=>{"name"=>"", "description"=>"", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receive"=>"", "customer_id"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "status", "startdate", "enddate", "receive", "customer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", ""], ["description", ""], ["status", "Waiting..."], ["startdate", ""], ["enddate", ""], ["receive", ""], ["customer_id", 2], ["created_at", "2017-05-23 08:56:02.008565"], ["updated_at", "2017-05-23 08:56:02.008565"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 13ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:56:02 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 106ms (Views: 103.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/6/edit" for 127.0.0.1 at 2017-05-23 01:56:05 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (5.0ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 94ms (Views: 90.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:56:07 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (1.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 125ms (Views: 119.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-23 01:56:08 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (5.2ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 109ms (Views: 108.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:56:39 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 110ms (Views: 104.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:56:42 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 136ms (Views: 131.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/projects/6/edit" for 127.0.0.1 at 2017-05-23 01:56:59 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (4.8ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 90ms (Views: 86.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:57:03 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (1.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (2.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 119ms (Views: 113.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:57:05 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 103ms (Views: 99.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:57:07 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 105ms (Views: 102.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-23 01:57:14 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (5.5ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 110ms (Views: 106.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:57:20 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (1.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (2.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 109ms (Views: 102.6ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:57:22 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 113ms (Views: 110.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/projects/6/edit" for 127.0.0.1 at 2017-05-23 01:57:31 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (5.9ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 104ms (Views: 100.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 01:57:37 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 117ms (Views: 113.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 02:02:21 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 116ms (Views: 114.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects/6/edit" for 127.0.0.1 at 2017-05-23 02:02:23 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (3.7ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 95ms (Views: 87.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 02:02:47 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 107ms (Views: 105.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects/6/edit" for 127.0.0.1 at 2017-05-23 02:02:48 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (127.0ms)
+  Rendered projects/edit.html.erb within layouts/application (128.0ms)
+Completed 500 Internal Server Error in 131ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `submit_tag' for #<ActionView::Helpers::FormBuilder:0x007f07dead4278>
+Did you mean?  submit):
+    32: 
+    33:       <%= f.submit :class => "btn btn-default"%>
+    34:       <p>
+    35:         <%= f.submit_tag t('.save'), class: 'btn btn-success' %>
+    36:       </p>
+    37: 
+    38:   <% end %>
+  
+app/views/projects/_form.html.erb:35:in `block in _app_views_projects__form_html_erb__121452100170616832_69835888743520'
+app/views/projects/_form.html.erb:18:in `_app_views_projects__form_html_erb__121452100170616832_69835888743520'
+app/views/projects/edit.html.erb:2:in `_app_views_projects_edit_html_erb__656510761472182448_69835888812580'
+Started GET "/projects/6/edit" for 127.0.0.1 at 2017-05-23 02:03:46 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (4.6ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 104ms (Views: 101.0ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/projects/6" for 127.0.0.1 at 2017-05-23 02:03:48 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"commit"=>"Update Project", "utf8"=>"✓", "authenticity_token"=>"ojBzojNIH7e1Q0uFOY9S57ADGb4147wdIJ8WVt1j7tFJ6mIf9/BnkV7xIGIYBEcpELqoES9GA9NacdDjo8sdgw==", "project"=>{"name"=>"", "description"=>"", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receive"=>"", "customer_id"=>"2"}, "id"=>"6"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 10ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 02:03:49 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 118ms (Views: 114.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/projects/6/edit" for 127.0.0.1 at 2017-05-23 02:03:50 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (7.2ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 117ms (Views: 112.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 02:03:54 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 123ms (Views: 120.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 02:05:56 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 111ms (Views: 108.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/6/edit" for 127.0.0.1 at 2017-05-23 02:05:57 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (5.1ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 93ms (Views: 87.5ms | ActiveRecord: 2.2ms)
+
+
+Started PATCH "/projects/6" for 127.0.0.1 at 2017-05-23 02:05:59 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nGvNZv40198haGzfY524Vw6ZGLwZPv3uLgYYx4bWu0d3sdzbOoyv+craBzhCFq2ZriCpEwObQiBU6N5y+H5IFQ==", "project"=>{"name"=>"", "description"=>"", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receive"=>"", "customer_id"=>"2"}, "commit"=>"Update Project", "id"=>"6"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 9ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 02:05:59 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 96ms (Views: 94.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects/6/edit" for 127.0.0.1 at 2017-05-23 02:06:01 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (7.3ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 100ms (Views: 96.2ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/projects/6" for 127.0.0.1 at 2017-05-23 02:06:04 -0700
+Processing by ProjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"28pSfuy++JQAndGGoYIuww3fFNhgxb3186cA5XisN70wEEPDKAaAsusvumGACTsNrWald3pgAjuJScZQBgTE7w==", "project"=>{"name"=>"", "description"=>"", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receive"=>"", "customer_id"=>"3"}, "commit"=>"Update Project", "id"=>"6"}
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE "projects" SET "customer_id" = $1, "updated_at" = $2 WHERE "projects"."id" = $3[0m  [["customer_id", 3], ["updated_at", "2017-05-23 09:06:04.364417"], ["id", 6]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 11ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 02:06:04 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 98ms (Views: 95.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 02:06:32 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 106ms (Views: 104.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/projects/6/edit" for 127.0.0.1 at 2017-05-23 02:06:33 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (9.0ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 108ms (Views: 104.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 02:06:37 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (2.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.7ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (2.8ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (1.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 114ms (Views: 105.3ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-23 02:06:38 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (12.1ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 107ms (Views: 104.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-23 02:06:42 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5CGs0MourXXzI4M1voL3e//0gLV2THzmwgemvzqbZFQN8mrpmiAthb13SiYHUVA+aylhZ6VQpc1BgoBHdAjKyQ==", "project"=>{"name"=>"", "description"=>"", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receive"=>"", "customer_id"=>"2"}, "commit"=>"Create Project"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "status", "startdate", "enddate", "receive", "customer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", ""], ["description", ""], ["status", "Waiting..."], ["startdate", ""], ["enddate", ""], ["receive", ""], ["customer_id", 2], ["created_at", "2017-05-23 09:06:42.026973"], ["updated_at", "2017-05-23 09:06:42.026973"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 14ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 02:06:42 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 108ms (Views: 106.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-23 02:06:47 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (11.8ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 107ms (Views: 104.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/projects" for 127.0.0.1 at 2017-05-23 02:06:47 -0700
+Processing by ProjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IJsfZDsnXdlIeCG0cSSFpqwrGoIsorFypYcyIREPhmPJSNldayndKQYs6KfI9yLjOPb7UP++aFkmAhTZX5wo/g==", "project"=>{"name"=>"", "description"=>"", "status"=>"Waiting...", "startdate"=>"", "enddate"=>"", "receive"=>"", "customer_id"=>"2"}, "commit"=>"Create Project"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "projects" ("name", "description", "status", "startdate", "enddate", "receive", "customer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", ""], ["description", ""], ["status", "Waiting..."], ["startdate", ""], ["enddate", ""], ["receive", ""], ["customer_id", 2], ["created_at", "2017-05-23 09:06:47.968442"], ["updated_at", "2017-05-23 09:06:47.968442"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/projects
+Completed 302 Found in 11ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 02:06:47 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 100ms (Views: 98.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 02:07:09 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 113ms (Views: 110.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/projects/new" for 127.0.0.1 at 2017-05-23 02:07:11 -0700
+Processing by ProjectsController#new as HTML
+  Rendering projects/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (20.7ms) [cache miss]
+  Rendered projects/new.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 108ms (Views: 106.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 02:07:12 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.9ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.6ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 106ms (Views: 102.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/projects/1/edit" for 127.0.0.1 at 2017-05-23 02:07:17 -0700
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT  "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering projects/edit.html.erb within layouts/application
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered projects/_form.html.erb (9.4ms) [cache miss]
+  Rendered projects/edit.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 129ms (Views: 123.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 02:07:20 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 116ms (Views: 111.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/projects" for 127.0.0.1 at 2017-05-23 02:08:28 -0700
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered projects/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 116ms (Views: 113.1ms | ActiveRecord: 2.1ms)
+
+
