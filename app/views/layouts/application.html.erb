@@ -10,6 +10,26 @@
 
   <body>
     <div class="header">EasyPM</div>
-    <%= yield %>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar">
+          <ul class=" list-group">
+
+            <li class="list-group-item">
+              <%= link_to 'Projects', projects_path, class: "nav-link" %>
+            </li>
+
+            <li class="list-group-item">
+              <%= link_to 'Customers', customers_path, class: "nav-link" %>
+            </li>
+
+          </ul>
+        </nav>
+
+        <div class="col-sm-9 col-md-10 content"><%= yield %></div>
+
+      </div>
+    </div>
   </body>
 </html>
