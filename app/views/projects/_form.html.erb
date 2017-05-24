@@ -14,7 +14,9 @@
       <%= select(:project, :status, [ ['Waiting...', 'Waiting...'],
                                       ['Done', 'Done'],
                                       ['Active', 'Active'],
-                                      ['In Testing', 'In Testing'] ]) %>
+                                      ['In Testing', 'In Testing'] ],
+                                      :include_blank => true,
+                                      :default => nil) %>
     </p>
 
     <p>
@@ -33,7 +35,7 @@
     </p>
 
     <p>
-      <%= collection_select(:project, :customer_id, Customer.all, :id, :name) %>
+      <%= collection_select(:project, :customer_id, Customer.all, :id, :name, :include_blank => true, :default => nil) %>
     </p>
 
     <p>
