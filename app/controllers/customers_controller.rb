@@ -8,6 +8,11 @@ class CustomersController < ApplicationController
     @customer = Customer.find(params[:id])
   end
 
+  def projects
+    @customer = Customer.find(params[:id])
+    @customer.projects
+  end
+
   def new
     @customer = Customer.new
   end
