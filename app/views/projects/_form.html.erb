@@ -19,20 +19,35 @@
                                       :default => nil ) %>
     </p>
 
-    <p>
-      <%= f.label :startdate %><br>
-      <%= f.text_field :startdate, class: 'input-group date' %>
-    </p>
+    <div class='datepicker_form'>
+      <%= f.label :startdate %>
+      <div class="input-group date">
+        <%= f.text_field :startdate, class: 'form-control' %>
+        <span class="input-group-addon">
+          <i class="glyphicon glyphicon-calendar"></i>
+        </span>
+      </div>
+    </div>
 
-    <p>
-      <%= f.label :enddate %><br>
-      <%= f.text_field :enddate, class: 'input-group date' %>
-    </p>
+    <div class='datepicker_form'>
+      <%= f.label :enddate %>
+      <div class="input-group date">
+        <%= f.text_field :enddate, class: 'form-control' %>
+        <span class="input-group-addon">
+          <i class="glyphicon glyphicon-calendar"></i>
+        </span>
+      </div>
+    </div>
 
-    <p>
-      <%= f.label :receive %><br>
-      <%= f.text_field :receive, class: 'input-group date' %>
-    </p>
+    <div class='datepicker_form'>
+      <%= f.label :receive %>
+      <div class="input-group date">
+        <%= f.text_field :receive, class: 'form-control' %>
+        <span class="input-group-addon">
+          <i class="glyphicon glyphicon-calendar"></i>
+        </span>
+      </div>
+    </div>
 
     <p>
       <%= collection_select(:project, :customer_id, Customer.all, :id, :name, :include_blank => true, :default => nil) %>
@@ -47,7 +62,11 @@
     </p>
 
     <div class="input-group date">
-      <input type="text" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+      <input type="text" class="form-control">
+      <span class="input-group-addon">
+        <i class="glyphicon glyphicon-calendar"></i>
+      </span>
     </div>
+
 
 <% end %>
