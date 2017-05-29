@@ -1,0 +1,27 @@
+I"((function() {
+  $(document).on("focus", "[data~='datepicker']", function(e) {});
+
+  -$(this).datepicker;
+
+  -({
+    format: "dd-mm-yyyy"
+  });
+
+  -({
+    weekStart: 1
+  });
+
+  -({
+    autoclose: true
+  });
+
+  -({
+    todayHighlight: true
+  });
+
+  -({
+    toggleActive: true
+  });
+
+}).call(this);
+:ET

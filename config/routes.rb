@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :homepages
   resources :projects
   resources :customers
+  resources :mytasks
 
   get 'customers/:id/projects', to: 'customers#projects#show', :as => :customer_projects
 
