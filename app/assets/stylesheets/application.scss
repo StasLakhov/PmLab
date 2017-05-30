@@ -19,6 +19,29 @@ body {
   height: 100%;
 }
 
+.input_form {
+  max-width: 300px;
+  margin-bottom: 10px;
+}
+
+select {
+  max-width: 300px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 3px;
+  border: 1px;
+  background: #f8fcfa;
+  padding: 2px;
+}
+
+select:hover {
+  background-color: #f8fcfa;
+}
+
 body {
   background-color: #ECF0F5;
 }

@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     $('.input-group.date').datepicker({
         orientation: "auto left",
