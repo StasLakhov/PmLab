@@ -1,1 +1,39 @@
-Here will be my Task List
+<h3>My Tasks</h3>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Status</th>
+    <th>Cteated</th>
+    <th>Finished</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <% @mytask.each do |mytask| %>
+      <tr>
+        <td><%= mytask.taskname %></td>
+        <td><%= mytask.taskcontent %></td>
+        <td><%= mytask.taskstatus %></td>
+        <td><%= mytask.createtask %></td>
+        <td><%= mytask.endtask %></td>
+        <td><%= link_to 'Open', mytask_path(mytask), class: "btn btn-default" %></td>
+        <td><%= link_to 'Edit', edit_mytask_path(mytask), class: "btn btn-default" %></td>
+        <td><%= link_to 'Delete', mytask,
+                        method: :delete,
+                        data: { confirm: 'Are you sure?' },
+                        class: "btn btn-default" %>
+        </td>
+      </tr>
+  <% end %>
+
+</table>
+
+<p>
+  <%= link_to new_mytask_path, class: "btn btn-default" do %>
+      <i class="glyphicon glyphicon-plus-sign"></i> Add Task
+  <% end %>
+</p>
+
