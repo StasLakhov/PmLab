@@ -23,11 +23,11 @@
       <td><%= @project.enddate %></td>
       <td><%= @project.receive %></td>
       <td><%= !@project.customer.nil? ? @project.customer.name : '' %></td>
-      <td><%= link_to 'Edit', edit_project_path, class: "btn btn-default" %></td>
-      <td><%= link_to 'Delete', @project,
+      <td><%= link_to '', edit_project_path, class: "glyphicon glyphicon-edit icon-edit" %></td>
+      <td><%= link_to '', @project,
                       method: :delete,
                       data: { confirm: 'Are you sure?' },
-                      class: "btn btn-default" %>
+                      class: "glyphicon glyphicon-remove-circle icon-remove" %>
       </td>
     </tr>
   </tbody>

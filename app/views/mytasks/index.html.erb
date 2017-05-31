@@ -19,12 +19,12 @@
         <td><%= mytask.taskstatus %></td>
         <td><%= mytask.createtask %></td>
         <td><%= mytask.endtask %></td>
-        <td><%= link_to 'Open', mytask_path(mytask), class: "btn btn-default" %></td>
-        <td><%= link_to 'Edit', edit_mytask_path(mytask), class: "btn btn-default" %></td>
-        <td><%= link_to 'Delete', mytask,
+        <td><%= link_to '', mytask_path(mytask), class: "glyphicon glyphicon-folder-open icon-open" %></td>
+        <td><%= link_to '', edit_mytask_path(mytask), class: "glyphicon glyphicon-edit icon-edit" %></td>
+        <td><%= link_to '', mytask,
                         method: :delete,
                         data: { confirm: 'Are you sure?' },
-                        class: "btn btn-default" %>
+                        class: "glyphicon glyphicon-remove-circle icon-remove" %>
         </td>
       </tr>
   <% end %>

@@ -6,10 +6,10 @@
 @import "datepicker";
 
 .header {
-  height: 60px;
-  padding: 10px 15px;
+  height: 40px;
+  padding: 5px 15px;
   background: #3C8DBC;
-  font-size: 26px;
+  font-size: 22px;
   color: #ffffff;
 }
 
@@ -69,6 +69,20 @@ body {
         display: block;
       }
     }
+  }
+}
+
+.icon {
+  &-open {
+    color: green;
+  }
+
+  &-edit {
+    color: #82c2ff;
+  }
+
+  &-remove {
+    color: red;
   }
 }
 
