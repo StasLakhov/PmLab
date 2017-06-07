@@ -1,16 +1,26 @@
-
-
 @import "bootstrap-sprockets";
 @import "bootstrap-datepicker";
 @import "bootstrap";
 @import "datepicker";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+$header-height: 50px;
 
 .header {
-  height: 40px;
+  height: $header-height;
   padding: 5px 15px;
-  background: #3C8DBC;
-  font-size: 22px;
-  color: #ffffff;
+  background: #003056;
+  font-size: 24px;
+  color: #f6a827;
+
+  img {
+    max-height: 100%;
+  }
+}
+
+.content {
+  padding-top: 10px;
 }
 
 html,
@@ -43,11 +53,11 @@ select:hover {
 }
 
 body {
-  background-color: #ECF0F5;
+  background-color: #FFFFFF;
 }
 
 .container-fluid {
-  height: calc(100% - 60px);
+  height: calc(100% - #{$header-height});
 
   .row,
   .sidebar,
@@ -56,7 +66,7 @@ body {
   }
 
   .sidebar {
-    background-color: #F9FAFC;
+    background-color: #003C6B;
     padding-top:20px;
 
     .list-group-item {
@@ -67,12 +77,42 @@ body {
       a {
         padding: 10px;
         display: block;
+        color: #fffbf9;
+        -moz-transition: all .2s linear;
+        -webkit-transition: all .2s linear;
+        transition: all .2s linear;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+
+        i {
+          margin-top: 3px;
+        }
+
+        &:hover,
+        &:focus,
+        &.active {
+          background: #fff;
+          color: #003C6B;
+          text-decoration: none;
+
+          i {
+            -moz-transform: scale(1.5);
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+          }
+        }
       }
     }
   }
 }
 
 .icon {
+  &-td {
+    width: 40px;
+    text-align: center;
+  }
+
   &-open {
     color: green;
   }

@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <div class="header">PM STUFF</div>
+    <div class="header"><%= link_to image_tag('pm_logo_5.png'), customers_path %></div>
 
     <div class="container-fluid">
       <div class="row">
@@ -18,19 +18,25 @@
 
             <li class="list-group-item">
               <%= link_to customers_path, class: "nav-link" do %>
-                  <i class="glyphicon glyphicon-user"></i> Customers
+                  <i class="pull-right glyphicon glyphicon-user"></i> Customers
               <% end %>
             </li>
 
             <li class="list-group-item">
               <%= link_to projects_path, class: "nav-link" do %>
-                  <i class="glyphicon glyphicon-briefcase"></i> Projects
+                  <i class="pull-right glyphicon glyphicon-briefcase"></i> Projects
               <% end %>
             </li>
 
             <li class="list-group-item">
               <%= link_to mytasks_path, class: "nav-link" do %>
-                  <i class="glyphicon glyphicon-tasks"></i> My Tasks
+                  <i class="pull-right fa fa-bug"></i> QA
+              <% end %>
+            </li>
+
+            <li class="list-group-item">
+              <%= link_to mytasks_path, class: "nav-link" do %>
+                  <i class="pull-right glyphicon glyphicon-tasks"></i> My Tasks
               <% end %>
             </li>
 
