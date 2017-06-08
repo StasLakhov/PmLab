@@ -7,8 +7,10 @@ Rails.application.routes.draw do
   resources :projects
   resources :customers
   resources :mytasks
+  resources :qas
 
   get 'customers/:id/projects', to: 'customers#projects#show', :as => :customer_projects
+  get 'projects/:id/qas', to: 'projects#qas#show', :as => :project_qas
 
 
 end
