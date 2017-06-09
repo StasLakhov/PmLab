@@ -9,7 +9,11 @@
   </head>
 
   <body>
-    <div class="header"><%= link_to image_tag('pm_logo_5.png'), root_path %></div>
+    <div class="header"><%= link_to image_tag('pm_logo_10.png'), root_path %>
+        <%= link_to mytasks_path, class: "nav-link" do %>
+          <i class="pull-right glyphicon  glyphicon-bell"></i>
+        <% end %>
+    </div>
 
     <div class="container-fluid">
       <div class="row">
@@ -37,6 +41,30 @@
             <li class="list-group-item">
               <%= link_to mytasks_path, class: "nav-link" do %>
                   <i class="pull-right glyphicon glyphicon-tasks"></i> My Tasks
+              <% end %>
+            </li>
+
+            <li class="list-group-item">
+              <%= link_to mytasks_path, class: "nav-link" do %>
+                  <i class="pull-right fa fa-users"></i> Team
+              <% end %>
+            </li>
+
+            <li class="list-group-item">
+              <%= link_to mytasks_path, class: "nav-link" do %>
+                  <i class="pull-right fa fa-clock-o"></i> Report
+              <% end %>
+            </li>
+
+            <li class="list-group-item">
+              <%= link_to mytasks_path, class: "nav-link" do %>
+                  <i class="pull-right fa fa-sticky-note"></i> Notes
+              <% end %>
+            </li>
+
+            <li class="list-group-item">
+              <%= link_to mytasks_path, class: "nav-link" do %>
+                  <i class="pull-right fa fa-google"></i> Google Drive
               <% end %>
             </li>
 

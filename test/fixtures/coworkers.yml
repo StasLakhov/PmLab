@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  coworker_name: 
+  coworker_position: 
+  coworker_phone: 
+  coworker_skype: 
+  coworker_email: MyString
+  customesr: one
+
+two:
+  coworker_name: 
+  coworker_position: 
+  coworker_phone: 
+  coworker_skype: 
+  coworker_email: MyString
+  customesr: two
