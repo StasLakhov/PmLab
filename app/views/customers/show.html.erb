@@ -7,10 +7,12 @@
   <%= link_to '', edit_customer_path, class: "glyphicon glyphicon-edit icon-edit" %>
 </p>
 
+
+<h3>Coworkers</h3>
+<%= render 'coworkers/coworker' %>
+
+<%= link_to 'New coworker',  new_customer_coworker_path(@customer.id), class: "btn btn-default" %>
+
 <p>
   <%= link_to 'Back', customers_path, class: "btn btn-default" %>
 </p>
-
-<%= render @customer.coworkers %>
-
-<%= render 'coworkers/form' %>
