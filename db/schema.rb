@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170609093632) do
+ActiveRecord::Schema.define(version: 20170612101259) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,10 +21,10 @@ ActiveRecord::Schema.define(version: 20170609093632) do
     t.string "coworker_phone"
     t.string "coworker_skype"
     t.string "coworker_email"
-    t.bigint "customers_id"
+    t.bigint "customer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["customers_id"], name: "index_coworkers_on_customers_id"
+    t.index ["customer_id"], name: "index_coworkers_on_customer_id"
   end
 
   create_table "customers", force: :cascade do |t|
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 20170609093632) do
     t.index ["project_id"], name: "index_qas_on_project_id"
   end
 
-  add_foreign_key "coworkers", "customers", column: "customers_id"
+  add_foreign_key "coworkers", "customers"
   add_foreign_key "projects", "customers"
   add_foreign_key "qas", "projects"
 end

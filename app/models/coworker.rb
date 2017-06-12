@@ -1,3 +1,3 @@
 class Coworker < ApplicationRecord
-  belongs_to :customesr
+  belongs_to :customer
 end

@@ -10,3 +10,58 @@
 <p>
   <%= link_to 'Back', customers_path, class: "btn btn-default" %>
 </p>
+
+<h2>Coworkers</h2>
+<% @customer.coworkers.each do |coworker| %>
+    <p>
+      <strong>Name:</strong>
+      <%= coworker.coworker_name %>
+    </p>
+
+    <p>
+      <strong>Position:</strong>
+      <%= coworker.coworker_position %>
+    </p>
+
+    <p>
+      <strong>Phone:</strong>
+      <%= coworker.coworker_phone %>
+    </p>
+
+    <p>
+      <strong>Skype:</strong>
+      <%= coworker.coworker_skype %>
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      <%= coworker.coworker_email %>
+    </p>
+<% end %>
+
+<h2>Add a coworker:</h2>
+<%= form_for([@customer, @customer.coworkers.build]) do |f| %>
+    <p>
+      <%= f.label :coworker_name %><br>
+      <%= f.text_field :coworker_name %>
+    </p>
+    <p>
+      <%= f.label :coworker_position %><br>
+      <%= f.text_area :coworker_position %>
+    </p>
+    <p>
+      <%= f.label :coworker_phone %><br>
+      <%= f.text_area :coworker_phone %>
+    </p>
+    <p>
+      <%= f.label :coworker_skype %><br>
+      <%= f.text_area :coworker_skype %>
+    </p>
+    <p>
+      <%= f.label :coworker_email %><br>
+      <%= f.text_area :coworker_email %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>

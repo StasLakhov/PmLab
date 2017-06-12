@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   resources :homepages
   resources :projects
-  resources :customers
+  resources :customers do
+    resources :coworkers
+  end
   resources :mytasks
   resources :qas
   resources :coworkers
