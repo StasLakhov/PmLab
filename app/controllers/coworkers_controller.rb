@@ -2,6 +2,12 @@ class CoworkersController < ApplicationController
 
   def new
     @customer = Customer.find(params[:customer_id])
+    @coworker = Coworker.new
+  end
+
+  def edit
+    @customer = Customer.find(params[:customer_id])
+    @coworker = Coworker.find(params[:id])
   end
 
   def create

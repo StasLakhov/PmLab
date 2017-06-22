@@ -1,5 +1,5 @@
 <h2>Add a coworker:</h2>
-<%= form_for([@customer, @customer.coworkers.build]) do |f| %>
+<%= form_for([@customer, @coworker]) do |f| %>
     <p>
       <%= f.label :coworker_name %><br>
       <%= f.text_field :coworker_name %>
