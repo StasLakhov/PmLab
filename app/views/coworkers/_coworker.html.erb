@@ -17,7 +17,7 @@
         <td><%= coworker.coworker_phone %></td>
         <td><%= coworker.coworker_skype %></td>
         <td><%= coworker.coworker_email %></td>
-
+        <td class="icon-td"><%= link_to '', edit_customer_coworker_path(coworker), class: "glyphicon glyphicon-edit icon-edit" %></td>
         <td class="icon-td"><%= link_to '', [coworker.customer, coworker],
                                         method: :delete,
                                         data: { confirm: 'Are you sure?' },

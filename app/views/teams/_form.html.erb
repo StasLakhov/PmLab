@@ -1,0 +1,33 @@
+<%= form_for @team do |f| %>
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label :position %><br>
+      <%= f.text_area :position %>
+    </p>
+    <p>
+      <%= f.label :phone %><br>
+      <%= f.text_area :phone %>
+    </p>
+    <p>
+      <%= f.label :skype %><br>
+      <%= f.text_area :skype %>
+    </p>
+    <p>
+      <%= f.label :email %><br>
+      <%= f.text_area :email %>
+    </p>
+    <p>
+      <%= f.label :birthday %><br>
+      <%= f.text_area :birthday %>
+    </p>
+    <p>
+      <%= f.label :hired %><br>
+      <%= f.text_area :hired %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>

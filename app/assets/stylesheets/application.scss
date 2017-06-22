@@ -10,12 +10,12 @@ $header-height: 50px;
 .header {
   height: $header-height;
   padding: 5px 15px;
-  background: #003056;
+  background: #000000;
   font-size: 24px;
   color: #f6a827;
 
   img {
-    max-height: 100%;
+    max-height: 70%;
   }
 }
 
@@ -66,7 +66,7 @@ body {
   }
 
   .sidebar {
-    background-color: #003C6B;
+    background-color: #333333;
     padding-top:20px;
 
     .list-group-item {

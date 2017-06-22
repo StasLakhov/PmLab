@@ -16,6 +16,14 @@ class CoworkersController < ApplicationController
     redirect_to customer_path(@customer)
   end
 
+  def update
+    @customer = Customer.find(params[:customer_id])
+    @coworker = Coworker.find(params[:id])
+    if @coworker.update(coworker_params)
+      redirect_to customer_path(@customer)
+    end
+  end
+
   def destroy
     @customer = Customer.find(params[:customer_id])
     @coworker = @customer.coworkers.find(params[:id])
